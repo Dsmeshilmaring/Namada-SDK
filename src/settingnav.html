@@ -536,7 +536,7 @@ input:checked + .slider:before {
     display: block;
     margin: 10px 0 5px; /* Space around labels */
     font-weight: bold;
-    color: #ffc800; /* Yellow text for visibility */
+    color: #ffffff; /* Yellow text for visibility */
 }
 
 /* Input fields */
@@ -585,6 +585,213 @@ input:checked + .slider:before {
 .save-button:hover {
     background-color: #e0b800; /* Darker yellow on hover */
 }
+.shielded-sync-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Cursor pointer */
+}
+
+.shielded-sync-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Address Book Section */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Light color for contrast */
+}
+
+.address-book {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.saved-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #1e1e1e; /* Darker background for each address item */
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+.address-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.address-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.wallet-address {
+    font-size: 14px;
+    color: #8e8e8e; /* Slightly lighter gray for contrast */
+}
+
+.address-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.copy-btn, .delete-btn, .add-address-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.copy-btn {
+    background-color: #3a6ea5; /* Subtle blue */
+    color: #ffffff;
+}
+
+.copy-btn:hover {
+    background-color: #5084c2;
+}
+
+.delete-btn {
+    background-color: #a53a3a; /* Soft red for delete */
+    color: #ffffff;
+}
+
+.delete-btn:hover {
+    background-color: #c25252;
+}
+
+.add-address-btn {
+    background-color: #3a6ea5; /* Matching blue for add button */
+    color: #ffffff;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 8px;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.add-address-btn:hover {
+    background-color: #5084c2;
+}
+/* Security and Backup Section */
+.security-backup-section {
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background */
+    border-radius: 10px;
+    color: #e0e0e0;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.security-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+.security-option:first-child {
+    border-top: none;
+}
+
+.option-title {
+    font-size: 18px;
+    color: #cfcfcf;
+}
+
+.action-btn, .reveal-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn {
+    background-color: #3a6ea5; /* Blue for primary actions */
+}
+
+.action-btn:hover {
+    background-color: #5084c2;
+}
+
+.reveal-btn {
+    background-color: #a53a3a; /* Red for sensitive actions */
+}
+
+.reveal-btn:hover {
+    background-color: #c25252;
+}
+
+/* Hidden seed phrase styling */
+.seed-phrase {
+    font-size: 14px;
+    color: #f5f5f5;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.seed-phrase.revealed {
+    display: inline-block;
+    background-color: #333;
+    padding: 5px 10px;
+    border: 1px dashed #777;
+}
+/* Support Section Styles */
+.support-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the support section */
+    border: 1px solid #ddd; /* Light border around the section */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above the section */
+}
+
+.support-section .section-title {
+    font-size: 1.8em; /* Larger font for the section title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #333; /* Dark color for better contrast */
+}
+
+.support-section p {
+    margin: 5px 0; /* Space between paragraphs */
+    color: #555; /* Slightly lighter color for text */
+}
+
+.support-section a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.support-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
 
 
 
@@ -645,97 +852,86 @@ input:checked + .slider:before {
     </div>
   </div>
 
+  <div id="settingsContent"></div>
+
   <script>
     function showSettings(setting) {
         const settingsContent = document.getElementById('settingsContent');
         let content = '';
 
         switch(setting) {
-          case 'wallets':
-    content = `
-        <div class="header">
-            <div class="dropdown">
-                <!-- Dropdown button to select account -->
-                <button class="dropdown-button" id="accountButton">Select Wallet <span>&#9662;</span></button>
-                <div class="dropdown-content" id="dropdownContent">
-                    <!-- Example account 1 -->
-                    <div class="account-item" onclick="changeAccount('Account 1', '0x5cf6D839fb839fb839fb839fb', '$14.74')">
-                        <div class="account-details">
-                            <span class="account-name">Account 1</span>
-                            <span class="wallet-address">0x5cf6D...839fb</span>
+            case 'wallets':
+                content = `
+                    <div class="header">
+                        <div class="dropdown">
+                            <button class="dropdown-button" id="accountButton">Account 1 <span>&#9662;</span></button>
+                            <div class="dropdown-content" id="dropdownContent">
+                                <div class="account-item" onclick="changeAccount('Account 1', '0x5cf6D839fb839fb839fb839fb', '$14.74')">
+                                    <div class="account-details">
+                                        <span class="account-name">Account 1</span>
+                                        <span class="wallet-address">0x5cf6D...839fb</span>
+                                    </div>
+                                    <span class="account-balance">$14.74</span>
+                                </div>
+                                <div class="account-item" onclick="changeAccount('Account 2', '0x4a67E9348a9348a9348a9348a', '$0.00')">
+                                    <div class="account-details">
+                                        <span class="account-name">Account 2</span>
+                                        <span class="wallet-address">0x4a67E...9348a</span>
+                                    </div>
+                                    <span class="account-balance">$0.00</span>
+                                </div>
+                                <div class="account-item add-wallet">
+                                    <button class="btn add-wallet-button" onclick="addNewWallet()">+ Add Wallet</button>
+                                </div>
+                            </div>
                         </div>
-                        <span class="account-balance">$14.74</span>
+                        <div class="sync-status" style="color: black;">SYNCHRONIZED</div>
                     </div>
 
-                    <!-- Example account 2 -->
-                    <div class="account-item" onclick="changeAccount('Account 2', '0x4a67E9348a9348a9348a9348a', '$0.00')">
-                        <div class="account-details">
-                            <span class="account-name">Account 2</span>
-                            <span class="wallet-address">0x4a67E...9348a</span>
+                    <div class="wallet-address">
+                        <div class="address-container">
+                            <span id="walletAddress">0x5cf6D...839fb</span>
+                            <img src="https://img.icons8.com/ios-glyphs/30/clipboard.png" class="copy-icon" onclick="copyToClipboard('walletAddress')" alt="Copy Address" />
                         </div>
-                        <span class="account-balance">$0.00</span>
                     </div>
 
-                    <!-- Add wallet option -->
-                    <div class="account-item add-wallet" onclick="addNewWallet()">
-                        <a href="#">+ Add Wallet</a>
+                    <div class="crypto-balance">
+                        <div class="balance-header">Available Balance</div>
+                        <div class="balance-amount" id="balanceAmount">$14.74</div>
                     </div>
-                </div>
-            </div>
 
-            <div class="sync-status" style="color: black;">SYNCHRONIZED</div>
-        </div>
-
-        <!-- Wallet address section - immediately after account dropdown -->
-        <div class="wallet-address">
-            <div class="address-container">
-                <span id="walletAddress">0x0000...0000</span> <!-- Default wallet address -->
-                <img src="https://img.icons8.com/ios-glyphs/20/clipboard.png" class="copy-icon" onclick="copyToClipboard('walletAddress')" alt="Copy Address" />
-            </div>
-        </div>
-
-        <!-- Crypto balance section -->
-        <div class="crypto-balance">
-            <div class="balance-header">Available Balance</div>
-            <div class="balance-amount" id="balanceAmount">0.00 NAM</div> <!-- Default balance -->
-        </div>
-
-        <!-- Action buttons -->
-        <div class="actions">
-            <button class="btn" onclick="loadReceiveToken()">Receive</button>
-            <button class="btn" onclick="loadSendToken()">Send</button>
-            <button class="btn">Buy</button>
-            <button class="btn">Sell</button>
-        </div>
-    `;
-    break;
-
+                    <div class="actions">
+                        <button class="btn" onclick="loadReceiveToken()">Receive</button>
+                        <button class="btn" onclick="loadSendToken()">Send</button>
+                        <button class="btn">Buy</button>
+                        <button class="btn">Sell</button>
+                    </div>
+                `;
+                break;
 
             case 'connection':
                 content = `
                     <div class="connection-section">
-                    
+                        <label>Network name</label>
+                        <input type="text" placeholder="Network name" class="input-field" />
 
-                      <!-- Properly formatted additional interface content -->
-                      <label>Network name</label>
-                      <input type="text" placeholder="Network name" class="input-field" />
+                        <label>New RPC URL</label>
+                        <input type="text" placeholder="New RPC URL" class="input-field" />
 
-                      <label>New RPC URL</label>
-                      <input type="text" placeholder="New RPC URL" class="input-field" />
+                        <label>Chain ID</label>
+                        <input type="text" placeholder="Chain ID" class="input-field" />
 
-                      <label>Chain ID</label>
-                      <input type="text" placeholder="Chain ID" class="input-field" />
+                        <label>Currency symbol</label>
+                        <input type="text" placeholder="Currency symbol" class="input-field" />
 
-                      <label>Currency symbol</label>
-                      <input type="text" placeholder="Currency symbol" class="input-field" />
+                        <label>Block explorer URL (Optional)</label>
+                        <input type="text" placeholder="Block explorer URL" class="input-field" />
 
-                      <label>Block explorer URL (Optional)</label>
-                      <input type="text" placeholder="Block explorer URL" class="input-field" />
-
-                      <div class="button-row">
-                        <button class="cancel-button">Cancel</button>
-                        <button class="save-button">Save</button>
-                      </div>
+                        <div class="button-row">
+                            <button class="cancel-button">Cancel</button>
+                            <button class="save-button">Save</button>
+                            <button class="shielded-sync-button" onclick="turnShieldedSync()">Turn Shielded Sync</button>
+                        </div>
                     </div>
                 `;
                 break;
@@ -744,6 +940,21 @@ input:checked + .slider:before {
                 content = `
                     <div class="section-title">Address Book</div>
                     <p>Manage your saved addresses for quick access.</p>
+                    <div class="address-book">
+                        <div class="saved-address">
+                            <span class="address-name">Wallet 1</span>
+                            <span class="wallet-address">0x5cf6D...839fb</span>
+                            <button class="copy-btn" onclick="copyToClipboard('0x5cf6D839fb839fb839fb839fb')">Copy</button>
+                            <button class="delete-btn" onclick="deleteAddress('Wallet 1')">Delete</button>
+                        </div>
+                        <div class="saved-address">
+                            <span class="address-name">Wallet 2</span>
+                            <span class="wallet-address">0x4a67E...9348a</span>
+                            <button class="copy-btn" onclick="copyToClipboard('0x4a67E9348a9348a9348a9348a')">Copy</button>
+                            <button class="delete-btn" onclick="deleteAddress('Wallet 2')">Delete</button>
+                        </div>
+                        <button class="add-address-btn" onclick="addNewAddress()">+ Add New Address</button>
+                    </div>
                 `;
                 break;
 
@@ -751,34 +962,29 @@ input:checked + .slider:before {
                 content = `
                     <div class="section-title">Security and Backup</div>
                     <p>Setup 2-factor authentication, backup options, and secure your account.</p>
-                `;
-                break;
-
-            case 'privacy':
-                content = `
-                    <div class="section-title">Privacy Settings</div>
-                    <p>Manage privacy controls, including data sharing and visibility settings.</p>
-                `;
-                break;
-
-            case 'display':
-                content = `
-                    <div class="section-title">Display Settings</div>
-                    <p>Adjust your interface theme, font size, and color preferences.</p>
-                `;
-                break;
-
-            case 'other':
-                content = `
-                    <div class="section-title">Other Settings</div>
-                    <p>Configure miscellaneous settings, such as notifications and app behavior.</p>
+                    <div class="security-option">
+                        <span class="option-title">2-Factor Authentication</span>
+                        <button class="action-btn" onclick="setup2FA()">Enable</button>
+                    </div>
+                    <div class="security-option">
+                        <span class="option-title">Backup Options</span>
+                        <button class="action-btn" onclick="backupOptions()">Backup Now</button>
+                    </div>
+                    <div class="security-option">
+                        <span class="option-title">Reveal Secret Seed Phrase</span>
+                        <button class="reveal-btn" onclick="revealSeedPhrase()">Reveal</button>
+                        <span class="seed-phrase hidden" id="seedPhrase">your-secret-seed-phrase</span>
+                    </div>
                 `;
                 break;
 
             case 'support':
                 content = `
-                    <div class="section-title">Support</div>
-                    <p>Contact support or access help resources.</p>
+                    <div class="support-section">
+                        <div class="section-title">Support</div>
+                        <p>If you need assistance, please reach out to us:</p>
+                        <p>Contact us at <a href="mailto:info@namazo.co">@namazo.co</a></p>
+                    </div>
                 `;
                 break;
 
@@ -791,38 +997,66 @@ input:checked + .slider:before {
     }
 
     function changeAccount(accountName, walletAddress, balance) {
-    // Update the dropdown button to show the selected account name only
-    const accountButton = document.getElementById('accountButton');
-    accountButton.innerHTML = `${accountName} <span>&#9662;</span>`;
-
-    // Update the wallet address in the "wallet-address" section
-    const walletAddressElement = document.getElementById('walletAddress');
-    walletAddressElement.innerText = `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}`;
-
-    // Update the available balance in the "crypto-balance" section
-    const balanceElement = document.getElementById('balanceAmount');
-    balanceElement.innerText = balance;
-}
-
-
+        const accountButton = document.getElementById('accountButton');
+        accountButton.innerHTML = `${accountName} <span>&#9662;</span>`;
+        const walletAddressElement = document.getElementById('walletAddress');
+        walletAddressElement.innerText = `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}`;
+        const balanceElement = document.getElementById('balanceAmount');
+        balanceElement.innerText = balance;
+    }
 
     function addNewWallet() {
-    alert("Add wallet functionality goes here.");
+        alert('Add new wallet functionality coming soon!');
     }
 
-    function toggleSwitch(element) {
-        element.classList.toggle('active');
-    }
-
-    function copyToClipboard(elementId) {
-        const text = document.getElementById(elementId).innerText;
+    function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
             alert('Address copied to clipboard!');
         }).catch(err => {
-            alert('Failed to copy address: ', err);
+            alert('Failed to copy address:', err);
         });
     }
+
+    function deleteAddress(name) {
+        if (confirm(`Are you sure you want to delete ${name}?`)) {
+            alert(`${name} has been deleted.`);
+        }
+    }
+
+    function addNewAddress() {
+        const addressName = prompt("Enter name for the new address:");
+        const address = prompt("Enter the wallet address:");
+        if (addressName && address) {
+            alert(`Address ${addressName} added successfully.`);
+        }
+    }
+
+    function revealSeedPhrase() {
+        const seedPhraseElement = document.getElementById('seedPhrase');
+        if (seedPhraseElement.classList.contains('hidden')) {
+            seedPhraseElement.classList.remove('hidden');
+            seedPhraseElement.classList.add('revealed');
+        } else {
+            seedPhraseElement.classList.add('hidden');
+            seedPhraseElement.classList.remove('revealed');
+        }
+    }
+
+    function setup2FA() {
+        alert('2FA setup functionality coming soon!');
+    }
+
+    function backupOptions() {
+        alert('Backup options functionality coming soon!');
+    }
+
+    function turnShieldedSync() {
+        alert('Shielded sync functionality coming soon!');
+    }
 </script>
+
+
+
 
 
 
