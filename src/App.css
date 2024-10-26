@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-size: 16px;
+  color: white;
+}
+
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
