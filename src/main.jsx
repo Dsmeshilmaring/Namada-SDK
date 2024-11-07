@@ -9,6 +9,7 @@ import CreateWallet from "./pages/Create-wallet";
 import NewPage from "./pages/New-Page";
 import VerifyWord from "./pages/Verify-word";
 import WalletList from "./pages/Wallet-list";
+import Dashboard from "./pages/Dashboard";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/verify-word" element={<VerifyWord />} />
         <Route path="/new-page" element={<NewPage />} />
         <Route path="/wallet-list" element={<WalletList />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   </React.StrictMode>
