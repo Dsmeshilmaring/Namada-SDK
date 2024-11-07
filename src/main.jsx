@@ -10,6 +10,7 @@ import NewPage from "./pages/New-Page";
 import VerifyWord from "./pages/Verify-word";
 import WalletList from "./pages/Wallet-list";
 import Dashboard from "./pages/Dashboard";
+import Settings from "./pages/Settings";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/new-page" element={<NewPage />} />
         <Route path="/wallet-list" element={<WalletList />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Router>
   </React.StrictMode>

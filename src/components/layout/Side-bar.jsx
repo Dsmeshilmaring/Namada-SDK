@@ -1,16 +1,13 @@
 import { useState } from "react";
-import { Link, useActionData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const SideBar = () => {
-  const [active, setActive] = useState("wallet");
-
+const SideBar = ({ currActive }) => {
   return (
-    <nav className="flex flex-col gap-4 p-5 w-full">
+    <nav className="flex flex-col gap-4 p-5 w-full max-w-[300px]">
       <Link
-        to={""}
-        onClick={() => setActive("wallet")}
+        to={"/dashboard"}
         className={`${
-          active == "wallet"
+          currActive == "wallet"
             ? "bg-secondary text-black"
             : "hover:bg-secondary hover:text-black text-white"
         } font-medium w-full p-2 rounded-md `}
@@ -23,7 +20,7 @@ const SideBar = () => {
         to={""}
         onClick={() => setActive("Help and Support")}
         className={`${
-          active == "Help and Support"
+          currActive == "Help and Support"
             ? "bg-secondary text-black"
             : "hover:bg-secondary hover:text-black text-white"
         } font-medium w-full p-2 rounded-md `}
@@ -33,10 +30,10 @@ const SideBar = () => {
       </Link>
 
       <Link
-        to={""}
+        to={"/settings"}
         onClick={() => setActive("Settings")}
         className={`${
-          active == "Settings"
+          currActive == "Settings"
             ? "bg-secondary text-black"
             : "hover:bg-secondary hover:text-black text-white"
         } font-medium w-full p-2 rounded-md `}
