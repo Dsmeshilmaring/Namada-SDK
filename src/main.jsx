@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CreateWallet from "./pages/Create-wallet";
 import NewPage from "./pages/New-Page";
 import VerifyWord from "./pages/Verify-word";
+import WalletList from "./pages/Wallet-list";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/create-wallet" element={<CreateWallet />} />
         <Route path="/verify-word" element={<VerifyWord />} />
         <Route path="/new-page" element={<NewPage />} />
+        <Route path="/wallet-list" element={<WalletList />} />
       </Routes>
     </Router>
   </React.StrictMode>
