@@ -11,6 +11,7 @@ import VerifyWord from "./pages/Verify-word";
 import WalletList from "./pages/Wallet-list";
 import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
+import ImportWalletTold from "./pages/Import-wallet-told";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/wallet-list" element={<WalletList />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/import-wallet-told" element={<ImportWalletTold />} />
       </Routes>
     </Router>
   </React.StrictMode>
