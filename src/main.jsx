@@ -14,6 +14,7 @@ import Settings from "./pages/Settings";
 import ImportWalletTold from "./pages/Import-wallet-told";
 import RecieveToken from "./pages/Recieve-token";
 import SendToken from "./pages/Send-token";
+import SettingNav from "./pages/Setting-nav";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -31,6 +32,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/import-wallet-told" element={<ImportWalletTold />} />
         <Route path="/recieve-token" element={<RecieveToken />} />
         <Route path="/send-token" element={<SendToken />} />
+        <Route path="/setting-nav" element={<SettingNav />} />
       </Routes>
     </Router>
   </React.StrictMode>
