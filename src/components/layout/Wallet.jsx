@@ -3,6 +3,16 @@ import AccountList from "./Account-list";
 
 function Wallet() {
   const [showAccountList, setShowAccountList] = useState(false);
+  const [activeAccount, setActiveAccount] = useState({
+    name: "Account 1",
+    address: "0x5cf6...39fb",
+    balance: 14.74,
+  });
+
+  // Active account Handler
+  const activeAccountHandler = (active) => {
+    setActiveAccount(active);
+  };
 
   return (
     <div className="flex flex-col justify-between gap-4 items-center pb-[15px]">
@@ -13,8 +23,10 @@ function Wallet() {
           className="bg-[#2a2a2a] py-[12px] px-[24px] text-[18px] cursor-pointer rounded-md hover:bg-[#3b3b3b] relative left-0"
           style={{ transition: "all 0.3s ease" }}
         >
-          Account 1 <span>▾</span>
-          {showAccountList && <AccountList />}
+          {activeAccount.name} <span>▾</span>
+          {showAccountList && (
+            <AccountList activeAccount={activeAccountHandler} />
+          )}
         </div>
 
         <p className="text-[12px] bg-[#ffc800] text-black py-[5px] px-[10px] rounded-full">
@@ -23,19 +35,20 @@ function Wallet() {
       </div>
 
       <div className="flex items-start w-full gap-3">
-        <span className="px-2">0x5cf6D...839fb</span>
+        <span className="px-2 text-[16px]">{activeAccount.address}</span>
 
         <img
           className="h-[24px] cursor-pointer"
           src="https://img.icons8.com/ios-glyphs/30/clipboard.png"
-          onclick="copyToClipboard('walletAddress')"
           alt="Copy Address"
         ></img>
       </div>
 
       <div className="mt-[20px] p-[15px] bg-[#3a3a3a] rounded-md w-full text-center">
         <label className="text-[18px]">Available Balance</label>
-        <p className="text-[24px] font-bold mt-[10px]">$14.74</p>
+        <p className="text-[24px] font-bold mt-[10px]">
+          ${activeAccount.balance}
+        </p>
       </div>
 
       <div className="grid grid-cols-2 gap-4 w-full">
