@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ConnectionAndSync from "../components/layout/Connection-and-sync";
 import Wallet from "../components/layout/Wallet";
+import AddressBook from "../components/layout/Address-book";
 
 function SettingNav() {
   const [active, setActive] = useState("Connection and Sync");
@@ -80,6 +81,8 @@ function SettingNav() {
           {active == "Connection and Sync" && <ConnectionAndSync />}
 
           {active == "Wallets" && <Wallet />}
+
+          {active == "Address book" && <AddressBook />}
         </div>
       </div>
     </div>

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import AccountList from "./Account-list";
 
 function Wallet() {
+  const addressValue = useRef();
   const [showAccountList, setShowAccountList] = useState(false);
   const [activeAccount, setActiveAccount] = useState({
     name: "Account 1",
@@ -12,6 +13,16 @@ function Wallet() {
   // Active account Handler
   const activeAccountHandler = (active) => {
     setActiveAccount(active);
+  };
+
+  // Copy the address
+  const copyAddressHandler = () => {
+    if (addressValue.current) {
+      navigator.clipboard
+        .writeText(addressValue.current.textContent)
+        .then(() => alert("Copied the address !"))
+        .catch((err) => alert("Fail to copy"));
+    }
   };
 
   return (
@@ -35,12 +46,15 @@ function Wallet() {
       </div>
 
       <div className="flex items-start w-full gap-3">
-        <span className="px-2 text-[16px]">{activeAccount.address}</span>
+        <span className="px-2 text-[16px]" ref={addressValue}>
+          {activeAccount.address}
+        </span>
 
         <img
           className="h-[24px] cursor-pointer"
           src="https://img.icons8.com/ios-glyphs/30/clipboard.png"
           alt="Copy Address"
+          onClick={copyAddressHandler}
         ></img>
       </div>
 
