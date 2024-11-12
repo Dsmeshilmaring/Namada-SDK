@@ -1,8 +1,8 @@
 import { useState } from "react";
-import ConnectionAndSync from "../../components/layout/Connection-and-sync";
+import ConnectionAndSync from "./Connection-and-sync";
 import Wallet from "../../pages/settings-nav/wallets/wallet-main";
-import AddressBook from "../../components/layout/Address-book";
-import SecurityAndBackup from "../../components/layout/Security-and-backup";
+import AddressBook from "./Address-book";
+import SecurityAndBackup from "./Security-and-backup";
 import SettingNav from "./Setting-nav";
 
 function SettingMain({ children }) {

@@ -38,7 +38,7 @@ function Wallet() {
   return (
     <>
       {activeLayout === "main" && (
-        <div className="flex flex-col justify-between gap-4 items-center pb-[15px] max-w-[400px]">
+        <div className="flex flex-col justify-between gap-4 items-center pb-[15px] max-w-[400px] min-w-[350px]">
           <div className="flex items-center justify-center gap-8">
             <div
               onMouseEnter={() => setShowAccountList(true)}
@@ -109,7 +109,6 @@ function Wallet() {
           </div>
         </div>
       )}
-
       {activeLayout === "Recieve" && <Receive />}
     </>
   );

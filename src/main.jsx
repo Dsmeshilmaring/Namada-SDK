@@ -14,9 +14,13 @@ import Settings from "./pages/Settings";
 import ImportWalletTold from "./pages/Import-wallet-told";
 import RecieveToken from "./pages/Recieve-token";
 import SendToken from "./pages/Send-token";
-import ConnectionAndSync from "./components/layout/Connection-and-sync";
+import ConnectionAndSync from "./pages/settings-nav/Connection-and-sync";
 import SettingMain from "./pages/settings-nav/setting-main";
 import Wallet from "./pages/settings-nav/wallets/wallet-main";
+import AddressBook from "./pages/settings-nav/Address-book";
+import SecurityAndBackup from "./pages/settings-nav/Security-and-backup";
+import Support from "./pages/settings-nav/Support";
+import Privacy from "./pages/settings-nav/Privacy";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -59,7 +63,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             path="address-book"
             element={
               <SettingMain>
-                <Wallet />
+                <AddressBook />
               </SettingMain>
             }
           ></Route>
@@ -68,7 +72,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             path="security-and-backup"
             element={
               <SettingMain>
-                <Wallet />
+                <SecurityAndBackup />
               </SettingMain>
             }
           ></Route>
@@ -77,7 +81,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             path="privacy"
             element={
               <SettingMain>
-                <Wallet />
+                <Privacy />
               </SettingMain>
             }
           ></Route>
@@ -86,7 +90,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             path="support"
             element={
               <SettingMain>
-                <Wallet />
+                <Support />
               </SettingMain>
             }
           ></Route>
