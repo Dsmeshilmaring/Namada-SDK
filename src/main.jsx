@@ -21,6 +21,8 @@ import AddressBook from "./pages/settings-nav/Address-book";
 import SecurityAndBackup from "./pages/settings-nav/Security-and-backup";
 import Support from "./pages/settings-nav/Support";
 import Privacy from "./pages/settings-nav/Privacy";
+import Receive from "./pages/settings-nav/wallets/Recieve";
+import WalletSendToken from "./pages/settings-nav/wallets/Wallet-send-token";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -50,15 +52,37 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             }
           ></Route>
 
-          <Route
-            path="wallets"
-            element={
-              <SettingMain>
-                <Wallet />
-              </SettingMain>
-            }
-          ></Route>
+          {/* ========== Wallets ========== */}
+          <Route path="wallets">
+            <Route
+              path=""
+              element={
+                <SettingMain>
+                  <Wallet />
+                </SettingMain>
+              }
+            />
 
+            <Route
+              path="recieve"
+              element={
+                <SettingMain>
+                  <Receive />
+                </SettingMain>
+              }
+            />
+
+            <Route
+              path="send-token"
+              element={
+                <SettingMain>
+                  <WalletSendToken />
+                </SettingMain>
+              }
+            />
+          </Route>
+
+          {/* ========== Address Book =========== */}
           <Route
             path="address-book"
             element={

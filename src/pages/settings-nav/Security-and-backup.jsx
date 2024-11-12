@@ -1,6 +1,6 @@
 const SecurityAndBackup = () => {
   return (
-    <div className="flex flex-col justify-center gap-4 max-w-[400px]">
+    <div className="flex flex-col justify-center gap-4 max-w-[350px]">
       <h1 className="text-[24px] font-bold mb-[10px] text-[#e0e0e0]">
         Security and Backup
       </h1>

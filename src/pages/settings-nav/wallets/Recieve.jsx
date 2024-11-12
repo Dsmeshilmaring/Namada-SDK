@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Receive = () => {
   const [addressType, setAddressType] = useState("Segwit");
@@ -23,20 +24,13 @@ const Receive = () => {
 
   return (
     <>
-      <div className="bg-primary p-[20px] rounded-lg mb-[10px] flex flex-col items-center max-w-[300px] relative">
-        <button
-          className="text-[20px] hover:text-[#ffc800] cursor-pointer hover:translate-x-[-5px] self-start absolute top-[-10px]"
-          style={{ transition: "all 0.3s ease" }}
-        >
-          &larr;
-        </button>
-
+      <div className="bg-primary p-[20px] rounded-lg mb-[10px] flex flex-col items-center relative w-full">
         <h2 className="text-[24px] mb-[20px] text-left text-[#f0f4f8] font-medium w-full">
           Receive
         </h2>
-        <div className="w-[150px] h-[150px] p-2 bg-[#fff] flex items-center justify-center rounded-lg">
+        <div className="w-[150px] h-[150px] p-2 bg-[#fff] flex items-center justify-center rounded-lg ">
           <img
-            className="w-auto"
+            className="w-full"
             src={
               addressType == "Segwit"
                 ? "https://api.qrserver.com/v1/create-qr-code/?data=bitcoin:bc1qf6zfy4we300vjx3fn0dnwwtjg33f0uvha8c4de&size=150x150"

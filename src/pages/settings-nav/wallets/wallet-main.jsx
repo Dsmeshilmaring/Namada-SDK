@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import AccountList from "./Account-list";
 import Receive from "./Recieve";
+import { Link } from "react-router-dom";
 
 function Wallet() {
   const addressValue = useRef();
@@ -78,20 +79,21 @@ function Wallet() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 w-full">
-            <button
-              onClick={() => activeLayoutHandler("Recieve")}
-              className="bg-[#ffc800] text-black py-[10px] px-[25px] rounded-md text-[16px] hover:translate-y-[-2px] hover:bg-[#c69f03] w-full"
+            <Link
+              to={"/setting-nav/wallets/recieve"}
+              className="bg-[#ffc800] text-black text-center py-[10px] px-[25px] rounded-md text-[16px] hover:translate-y-[-2px] hover:bg-[#c69f03] w-full"
               style={{ transition: "all 0.3s ease" }}
             >
               Recieve
-            </button>
+            </Link>
 
-            <button
-              className="bg-[#ffc800] text-black py-[10px] px-[25px] rounded-md text-[16px] hover:translate-y-[-2px] hover:bg-[#c69f03] w-full"
+            <Link
+              to={"/setting-nav/wallets/send-token"}
+              className="bg-[#ffc800] text-center text-black py-[10px] px-[25px] rounded-md text-[16px] hover:translate-y-[-2px] hover:bg-[#c69f03] w-full"
               style={{ transition: "all 0.3s ease" }}
             >
               Send
-            </button>
+            </Link>
 
             <button
               className="bg-[#ffc800] text-black py-[10px] px-[25px] rounded-md text-[16px] hover:translate-y-[-2px] hover:bg-[#c69f03] w-full"

@@ -1,6 +1,6 @@
 const ConnectionAndSync = () => {
   return (
-    <div className="bg-[#1c1c1c] p-[20px] rounded-md w-full min-w-[300px]">
+    <>
       <label className="font-bold my-[10px] block">Network name</label>
       <input
         placeholder="Network name"
@@ -58,13 +58,13 @@ const ConnectionAndSync = () => {
         </button>
 
         <button
-          className="bg-[#007bff] text-white py-[10px] px-[20px] rounded-md text-[14px] hover:bg-[#0056b3] w-auto flex items-center justify-center"
+          className="bg-[#007bff] text-white py-[10px] px-[20px] rounded-md text-[14px] hover:bg-[#0056b3] w-full flex items-center justify-center"
           style={{ transition: "all 0.3s ease" }}
         >
           Turn Shielded Sync
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
