@@ -22,26 +22,21 @@ const Receive = () => {
   }
 
   return (
-    <div
-      className="bg-primary p-[40px] rounded-lg w-[400px] shadow-custom-shadow hover:translate-y-[-5px]"
-      style={{ transition: "all 0.3s ease-in-out" }}
-    >
-      <header className="flex justify-between items-center mb-[20px]">
-        <div className="flex items-center">
-          <span className="text-[24px] text-[#ffbf00]">🪙</span>
-          <span className="ml-[20px] font-[20px]">fghj</span>
-        </div>
-        <p className="text-[#57a6ff] text-[12px]">SYNCHRONIZED</p>
-      </header>
+    <>
+      <div className="bg-primary p-[20px] rounded-lg mb-[10px] flex flex-col items-center max-w-[300px] relative">
+        <button
+          className="text-[20px] hover:text-[#ffc800] cursor-pointer hover:translate-x-[-5px] self-start absolute top-[-10px]"
+          style={{ transition: "all 0.3s ease" }}
+        >
+          &larr;
+        </button>
 
-      <div className="bg-primary p-[20px] rounded-lg mb-[20px] flex flex-col items-center">
-        <h2 className="text-[28px] mb-[25px] text-center text-[#f0f4f8] font-medium">
+        <h2 className="text-[24px] mb-[20px] text-left text-[#f0f4f8] font-medium w-full">
           Receive
         </h2>
-
-        <div className="w-[200px] h-[200px] bg-[#fff] flex items-center justify-center rounded-lg">
+        <div className="w-[150px] h-[150px] p-2 bg-[#fff] flex items-center justify-center rounded-lg">
           <img
-            className="w-[90%]"
+            className="w-auto"
             src={
               addressType == "Segwit"
                 ? "https://api.qrserver.com/v1/create-qr-code/?data=bitcoin:bc1qf6zfy4we300vjx3fn0dnwwtjg33f0uvha8c4de&size=150x150"
@@ -51,7 +46,7 @@ const Receive = () => {
         </div>
       </div>
 
-      <div className="mt-20px text-center">
+      <div className="mt-[10px] text-center">
         <label>Address Type:</label>
         <select
           onChange={(e) => addressTypeHandler(e)}
@@ -68,7 +63,7 @@ const Receive = () => {
 
       <p
         ref={addressRef}
-        className="mt-[20px] break-words text-[14px] text-center"
+        className="mt-[20px] break-words text-[12px] text-center"
       >
         {addressType == "Segwit"
           ? "bc1qf6zfy4we300vjx3fn0dnwwtjg33f0uvha8c4de"
@@ -77,12 +72,12 @@ const Receive = () => {
 
       <button
         onClick={CopyAddressHandler}
-        className="w-full rounded-md bg-secondary text-[#1e1e1e] font-medium cursor-pointer tracking-wide p-[14px] mt-[20px] hover:bg-[#285dcc]"
+        className="w-full rounded-md bg-secondary text-[#1e1e1e] font-medium cursor-pointer tracking-wide p-[10px] mt-[20px] hover:bg-[#285dcc]"
         style={{ transition: "all 0.3s ease-in-out" }}
       >
         COPY ADDRESS
       </button>
-    </div>
+    </>
   );
 };
 

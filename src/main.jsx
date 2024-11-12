@@ -14,7 +14,9 @@ import Settings from "./pages/Settings";
 import ImportWalletTold from "./pages/Import-wallet-told";
 import RecieveToken from "./pages/Recieve-token";
 import SendToken from "./pages/Send-token";
-import SettingNav from "./pages/Setting-nav";
+import ConnectionAndSync from "./components/layout/Connection-and-sync";
+import SettingMain from "./pages/settings-nav/setting-main";
+import Wallet from "./pages/settings-nav/wallets/wallet-main";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -32,7 +34,63 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/import-wallet-told" element={<ImportWalletTold />} />
         <Route path="/recieve-token" element={<RecieveToken />} />
         <Route path="/send-token" element={<SendToken />} />
-        <Route path="/setting-nav" element={<SettingNav />} />
+
+        {/* ========== Setting Section ======= */}
+        <Route path="/setting-nav">
+          <Route
+            path="connection-and-sync"
+            element={
+              <SettingMain>
+                <ConnectionAndSync />
+              </SettingMain>
+            }
+          ></Route>
+
+          <Route
+            path="wallets"
+            element={
+              <SettingMain>
+                <Wallet />
+              </SettingMain>
+            }
+          ></Route>
+
+          <Route
+            path="address-book"
+            element={
+              <SettingMain>
+                <Wallet />
+              </SettingMain>
+            }
+          ></Route>
+
+          <Route
+            path="security-and-backup"
+            element={
+              <SettingMain>
+                <Wallet />
+              </SettingMain>
+            }
+          ></Route>
+
+          <Route
+            path="privacy"
+            element={
+              <SettingMain>
+                <Wallet />
+              </SettingMain>
+            }
+          ></Route>
+
+          <Route
+            path="support"
+            element={
+              <SettingMain>
+                <Wallet />
+              </SettingMain>
+            }
+          ></Route>
+        </Route>
       </Routes>
     </Router>
   </React.StrictMode>
