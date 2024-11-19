@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SideBar = ({ currActive }) => {
   return (
-    <nav className="flex flex-col gap-4 p-5 w-full max-w-[300px]">
+    <nav className="flex flex-col gap-4 p-5 w-full flex-1">
       <Link
         to={"/dashboard"}
         className={`${
@@ -23,7 +23,7 @@ const SideBar = ({ currActive }) => {
           currActive == "Help and Support"
             ? "bg-secondary text-black"
             : "hover:bg-secondary hover:text-black text-white"
-        } font-medium w-full p-2 rounded-md `}
+        } font-medium p-2 rounded-md w-full`}
         style={{ transition: "all 0.3s ease" }}
       >
         Help and Support

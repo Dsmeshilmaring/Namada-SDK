@@ -14,11 +14,11 @@ function SettingMain({ children }) {
   };
 
   return (
-    <div className="flex w-auto max-w-[1200px] rounded-lg overflow-hidden shadow-custom-shadow bg-[#2a2a2a]">
+    <div className="flex w-auto max-w-[120rem] rounded-lg overflow-hidden shadow-custom-shadow bg-[#2a2a2a]">
       <SettingNav />
 
-      <div className="flex justify-center items-center p-[20px] min-w-[450px]">
-        <div className="bg-[#2a2a2a] rounded-md p-[20px] shadow-custom-shadow w-full">
+      <div className="flex justify-center items-center p-[2rem] min-w-[45rem]">
+        <div className="bg-[#2a2a2a] rounded-md p-[2rem] shadow-custom-shadow w-full">
           {children}
         </div>
       </div>

@@ -27,18 +27,18 @@ const RestoreWallet = () => {
   };
 
   return (
-    <div className="flex justify-between max-w-[600px] flex-col bg-[#1e1e1e] p-[20px] rounded-lg w-[80%] gap-[20px] relative">
+    <div className="flex justify-between max-w-[60rem] flex-col bg-[#1e1e1e] p-[2rem] rounded-lg w-[80%] gap-[2rem] relative">
       <div className="flex">
         <BackButton />
-        <p className="font-normal m-auto text-[1.5rem]">Import Existing Keys</p>
+        <p className="font-normal m-auto text-[2.4rem]">Import Existing Keys</p>
       </div>
 
       <div className="flex flex-col text-center">
-        <p className="text-[0.8rem]">
+        <p className="text-[1.4rem]">
           • Enter your seed phrase in the right order without capitalization,
           punctuation symbols, or spaces.
         </p>
-        <p className="text-[0.8rem]">• Or copy and paste your entire phrase.</p>
+        <p className="text-[1.4rem]">• Or copy and paste your entire phrase.</p>
       </div>
 
       {/* Button Section */}
@@ -48,7 +48,7 @@ const RestoreWallet = () => {
             active == 12
               ? "bg-[#ffc800] hover:bg-[#ffc800] text-black"
               : "bg-[#333] hover:bg-[#c69f03]"
-          } w-full rounded-full p-[10px]`}
+          } w-full rounded-full p-[1rem]`}
           onClick={() => {
             setActive(12);
             setValidNext(false);
@@ -63,7 +63,7 @@ const RestoreWallet = () => {
             active == 24
               ? "bg-[#ffc800] hover:bg-[#ffc800] text-black"
               : "bg-[#333] hover:bg-[#c69f03]"
-          } w-full rounded-full p-[10px]`}
+          } w-full rounded-full p-[1rem]`}
           onClick={() => {
             setActive(24);
             setValidNext(false);
@@ -78,7 +78,7 @@ const RestoreWallet = () => {
             active == "Private Key"
               ? "bg-[#ffc800] hover:bg-[#ffc800] text-black"
               : "bg-[#333] hover:bg-[#c69f03]"
-          } w-full rounded-full p-[10px]`}
+          } w-full rounded-full p-[1rem]`}
           style={{ transition: "all 0.3s ease" }}
           onClick={() => {
             setValidNext(false);
@@ -103,7 +103,7 @@ const RestoreWallet = () => {
       {active == "Private Key" && (
         <input
           type="text"
-          className="p-[10px] bg-[#333] border-2 border-[#555] rounded-lg text-white text-center text-[1rem] w-full"
+          className="p-[1rem] bg-[#333] border-2 border-[#555] rounded-lg text-white text-center text-[1rem] w-full"
           placeholder="Enter your private key"
           onChange={(e) => privateInputHandler(e)}
         ></input>
@@ -119,7 +119,7 @@ const RestoreWallet = () => {
       <button
         className={`${
           validNext ? "cursor-pointer bg-[#ffc800]" : "cursor-not-allowed"
-        } bg-[#c69f03] cursor-not-allowed p-[10px] rounded-lg text-black`}
+        } bg-[#c69f03] cursor-not-allowed p-[1rem] rounded-lg text-black`}
       >
         Next
       </button>

@@ -25,7 +25,7 @@ const AccountList = ({ activeAccount }) => {
         onClick={() => clickHandler(item)}
         className={`${
           active === item.name ? "outline outline-1" : ""
-        } grid grid-cols-2 w-[250px] py-[5px] bg-primary hover:bg-[#444] p-3 gap-0 rounded-md`}
+        } grid grid-cols-2 w-[25rem] py-[.5rem] bg-primary hover:bg-[#444] p-3 gap-0 rounded-md`}
       >
         <span className="">{item.name}</span>
         <p className="row-span-2  self-center justify-self-end font-bold">
@@ -37,7 +37,7 @@ const AccountList = ({ activeAccount }) => {
   });
 
   return (
-    <div className="bg-[#333] p-4 absolute flex flex-col gap-2 top-[50px] left-0 rounded-lg">
+    <div className="bg-[#333] p-4 absolute flex flex-col gap-2 top-[5rem] left-0 rounded-lg">
       {accountDisplay}
 
       <div className="w-full p-2 hover:bg-primary rounded-md">

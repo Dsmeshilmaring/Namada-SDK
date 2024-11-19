@@ -18,14 +18,14 @@ const SettingNav = () => {
   };
 
   return (
-    <div className="w-[250px] p-[20px] flex flex-col g-[20px] gap-2 items-start bg-[#1e1e1e]">
+    <div className="w-[25rem] p-[2rem] flex flex-col g-[2rem] gap-2 items-start bg-[#1e1e1e]">
       <button
         onClick={() => activeHandler("connection-and-sync")}
         className={`${
           active == "connection-and-sync"
             ? "outline outline-1 outline-[#fff]"
             : ""
-        } text-[16px] p-[10px] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
+        } text-[1.6rem] p-[1rem] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
         style={{ transition: "all 0.3s ease" }}
       >
         Connection and Sync
@@ -35,7 +35,7 @@ const SettingNav = () => {
         onClick={() => activeHandler("wallets")}
         className={`${
           active === "wallets" ? "outline outline-1 outline-[#fff]" : ""
-        } text-[16px] p-[10px] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
+        } text-[1.6rem] p-[1rem] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
         style={{ transition: "all 0.3s ease" }}
       >
         Wallets
@@ -45,7 +45,7 @@ const SettingNav = () => {
         onClick={() => activeHandler("address-book")}
         className={`${
           active === "address-book" ? "outline outline-1 outline-[#fff]" : ""
-        } text-[16px] p-[10px] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
+        } text-[1.6rem] p-[1rem] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
         style={{ transition: "all 0.3s ease" }}
       >
         Address book
@@ -57,7 +57,7 @@ const SettingNav = () => {
           active === "security-and-backup"
             ? "outline outline-1 outline-[#fff]"
             : ""
-        } text-[16px] p-[10px] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
+        } text-[1.6rem] p-[1rem] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
         style={{ transition: "all 0.3s ease" }}
       >
         Security and backup
@@ -67,7 +67,7 @@ const SettingNav = () => {
         onClick={() => activeHandler("privacy")}
         className={`${
           active === "privacy" ? "outline outline-1 outline-[#fff]" : ""
-        } text-[16px] p-[10px] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
+        } text-[1.6rem] p-[1rem] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
         style={{ transition: "all 0.3s ease" }}
       >
         Privacy
@@ -77,7 +77,7 @@ const SettingNav = () => {
         onClick={() => activeHandler("support")}
         className={`${
           active === "support" ? "outline outline-1 outline-[#fff]" : ""
-        } text-[16px] p-[10px] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
+        } text-[1.6rem] p-[1rem] rounded-md cursor-pointer hover:bg-[#ffc800] hover:text-black w-full text-start`}
         style={{ transition: "all 0.3s ease" }}
       >
         Support
