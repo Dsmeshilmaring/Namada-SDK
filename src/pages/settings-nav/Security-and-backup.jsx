@@ -11,7 +11,7 @@ const SecurityAndBackup = () => {
       <div className="border-t-[.1rem] border-[#333] pt-[1rem] flex items-center justify-between">
         <span className="text-[1.8rem]">2-Factor Authentication</span>
         <button
-          className="bg-[#3a6ea5] py-[.8rem] px-[2rem] rounded-md text-[1.6rem] hover:bg-[#5084c2]"
+          className="bg-[#3a6ea5] py-[.8rem] px-[2rem] rounded-md text-[1.6rem] hover:bg-[#5084c2] xxsm:px-[1rem] xxsm:py-[1rem]"
           style={{ transition: "all 0.3s ease" }}
         >
           Enable
@@ -21,7 +21,7 @@ const SecurityAndBackup = () => {
       <div className="border-t-[.1rem] border-[#333] pt-[1rem] flex items-center justify-between">
         <span className="text-[1.8rem]">Backup Options</span>
         <button
-          className="bg-[#3a6ea5] py-[.8rem] px-[2rem] rounded-md text-[1.6rem] hover:bg-[#5084c2]"
+          className="bg-[#3a6ea5] py-[.8rem] px-[2rem] rounded-md text-[1.6rem] hover:bg-[#5084c2] xxsm:px-[1rem] xxsm:py-[1rem]"
           style={{ transition: "all 0.3s ease" }}
         >
           Backup Now
@@ -31,7 +31,7 @@ const SecurityAndBackup = () => {
       <div className="border-t-[.1rem] border-[#333] pt-[1rem] flex items-center justify-between">
         <span className="text-[1.8rem]">2-Factor Authentication</span>
         <button
-          className="bg-[#a53a3a] py-[.8rem] px-[2rem] rounded-md text-[1.4rem] hover:bg-[#c25252]"
+          className="bg-[#a53a3a] py-[.8rem] px-[2rem] rounded-md text-[1.4rem] hover:bg-[#c25252] xxsm:px-[1rem] xxsm:py-[1rem]"
           style={{ transition: "all 0.3s ease" }}
         >
           Reveal

@@ -18,7 +18,7 @@ const CreateNewWallet = () => {
 
   return (
     <div
-      className="bg-[#2a2a2a] w-[full] max-w-[40rem] relative rounded-[1.5rem] p-[2rem] flex flex-col gap-2 items-center justify-center"
+      className="bg-[#2a2a2a] w-[full] max-w-[40rem] relative rounded-[1.5rem] p-[2rem] flex flex-col gap-2 items-center justify-center xxsm:w-[90%]"
       style={{ boxShadow: "0px 1rem 2rem rgba(0, 0, 0, 0.5)" }}
     >
       <BackButton />
@@ -79,7 +79,7 @@ const CreateNewWallet = () => {
         </div>
       </div>
 
-      <button className="bg-[#ffc800] cursor-not-allowed opacity-50 p-[1.5rem] w-full rounded-md text-black text-[1.8rem] mt-[2rem]">
+      <button className="bg-[#ffc800] cursor-not-allowed opacity-50 p-[1.2rem] w-full rounded-md text-black text-[1.8rem] mt-[2rem]">
         Next
       </button>
     </div>

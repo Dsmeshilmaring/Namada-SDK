@@ -19,7 +19,7 @@ const NewPage = () => {
 
   return (
     <div
-      className="relative p-[2rem] bg-[#2a2a2a] rounded-lg w-[30rem] flex flex-col justify-start items-center h-[35rem]"
+      className="relative p-[2rem] bg-[#2a2a2a] rounded-lg w-[30rem] flex flex-col justify-start items-center h-[35rem] xxsm:w-[90%]"
       style={{ boxShadow: "0 1rem 2rem rgba(0, 0, 0, 0.5)" }}
     >
       <BackButton />

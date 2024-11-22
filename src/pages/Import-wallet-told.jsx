@@ -24,13 +24,13 @@ const ImportWalletTold = () => {
   }, [selected]);
 
   return (
-    <section className="bg-[#2a2a2a] rounded-lg p-[2rem] shadow-custom-shadow max-w-[40rem] self-center">
+    <section className="bg-[#2a2a2a] rounded-lg p-[2rem] shadow-custom-shadow max-w-[40rem] self-center xxsm:w-[90%]">
       <div className="flex justify-around items-center mt-[2rem] mb-[2rem]">
         <div className="flex text-center flex-col justify-center items-center gap-2">
           <span className="bg-[#4caf50] text-white w-[4rem] h-[4rem] rounded-full line-clamp-[3rem] font-bold flex justify-center items-center">
             1
           </span>
-          <p className="text-[1.4rem] text-[#ccc]">
+          <p className="text-[1.4rem] text-[#ccc] max-w-[100px]">
             Confirm secret recovery phrase
           </p>
         </div>
@@ -47,11 +47,11 @@ const ImportWalletTold = () => {
         Access your wallet with your Secret Recovery Phrase
       </h1>
 
-      <form>
+      <form className="mt-8">
         <label>Type your Secret Recovery Phrase</label>
 
         {/* Type your secret recovery phrase */}
-        <div className="mt-4">
+        <div className="mt-2">
           <DropDown select={DropDownHandler} />
         </div>
 

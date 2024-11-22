@@ -50,14 +50,18 @@ const Receive = () => {
             transition: "all 0.3s ease-in-out",
           }}
         >
-          <option value={"Segwit"}>Transparent (Segwit)</option>
-          <option value={"ZK"}>Shielded (ZK)</option>
+          <option className="w-28" value={"Segwit"}>
+            Transparent (Segwit)
+          </option>
+          <option className="w-28" value={"ZK"}>
+            Shielded (ZK)
+          </option>
         </select>
       </div>
 
       <p
         ref={addressRef}
-        className="mt-[2rem] break-words text-[1.2rem] text-center"
+        className="mt-[2rem] break-words text-[1.2rem] text-center xxsm:w-[20rem] w-[90%]"
       >
         {addressType == "Segwit"
           ? "bc1qf6zfy4we300vjx3fn0dnwwtjg33f0uvha8c4de"

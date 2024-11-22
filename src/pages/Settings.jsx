@@ -8,8 +8,8 @@ const Settings = () => {
   }
 
   return (
-    <div className="flex justify-between items-start max-w-[80rem]  bg-primary rounded-lg w-[90%] p-[2rem] shadow-custom-shadow  h-[90vh]">
-      <SideBar currActive={"Settings"} />
+    <div className="flex justify-between items-start max-w-[80rem]  bg-primary rounded-lg w-[90%] p-[2rem] xxsm:p-[0rem] shadow-custom-shadow  h-[90vh] xxsm:max-h-[70rem]">
+      <SideBar currActive={"settings"} />
 
       <div
         className="max-w-[50rem] w-full overflow-y-scroll h-full p-4"
@@ -25,7 +25,7 @@ const Settings = () => {
         <section className="border w-full border-1 border-[#555] rounded-md mt-2 p-3 flex flex-col gap-4">
           <div>
             <p
-              className="text-[2.4rem] py-[1rem] text-[#ffc800]"
+              className="text-[2rem] py-[1rem] text-[#ffc800]"
               style={{ borderBottom: "1px solid #555" }}
             >
               Wallet Settings

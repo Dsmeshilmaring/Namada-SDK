@@ -16,11 +16,13 @@ function AddressBook() {
     return (
       <div
         key={item.name}
-        className="flex justify-between items-center p-[1.2rem] bg-[#1e1e1e] my-[0.5rem] text-white rounded-md gap-3"
+        className="flex justify-between items-center p-[1.2rem] bg-[#1e1e1e] my-[0.5rem] text-white rounded-md gap-3 xxsm:flex-wrap xxsm:justify-start"
         style={{ boxShadow: "0 0.4rem 1rem rgba(0, 0, 0, 0.15)" }}
       >
         <span>{item.name}</span>
-        <span className="text-left text-[#8e8e8e]">{item.address}</span>
+        <span className="text-left text-[#8e8e8e] xxsm:m-auto">
+          {item.address}
+        </span>
         <button
           onClick={() => {
             navigator.clipboard
@@ -45,10 +47,12 @@ function AddressBook() {
 
   return (
     <div>
-      <h1 className="text-[2.4rem] font-bold mb-[1rem] text-[#e0e0e0]">
+      <h1 className="text-[2.4rem] font-bold mb-[1rem] text-[#e0e0e0] w-fit">
         Address Book
       </h1>
-      <p className="">Manage your saved addresses for quick access.</p>
+      <p className="text-[#c7c7c7]">
+        Manage your saved addresses for quick access.
+      </p>
 
       <div className="flex flex-col mt-[1.5rem]">{accoutList}</div>
 

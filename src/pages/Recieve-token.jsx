@@ -23,7 +23,7 @@ const RecieveToken = () => {
 
   return (
     <div
-      className="bg-primary p-[4rem] rounded-lg w-[40rem] shadow-custom-shadow hover:translate-y-[-5px]"
+      className="bg-primary p-[4rem] rounded-lg w-[40rem] shadow-custom-shadow hover:translate-y-[-5px] xxsm:w-[90%] xxsm:p-[2rem]"
       style={{ transition: "all 0.3s ease-in-out" }}
     >
       <header className="flex justify-between items-center mb-[2rem]">

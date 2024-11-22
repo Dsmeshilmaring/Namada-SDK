@@ -2,7 +2,7 @@ import SideBar from "../components/layout/Side-bar";
 
 const Dashboard = () => {
   return (
-    <div className="flex w-[90%] max-w-[auto] rounded-lg overflow-hidden shadow-custom-shadow bg-[#2a2a2a] p-[2rem]">
+    <div className="flex w-[90%] max-w-[auto] rounded-lg overflow-hidden shadow-custom-shadow bg-[#2a2a2a]">
       <SideBar currActive={"wallet"} />
 
       <section className="bg-[#2a2a2a] rounded-lg max-w-[48rem] w-full p-[2rem] shadow-custom-shadow m-[1rem]">

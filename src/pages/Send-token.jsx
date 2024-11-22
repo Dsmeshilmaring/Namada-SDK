@@ -7,7 +7,7 @@ function SendToken() {
 
   return (
     <div
-      className="bg-primary p-[4rem] w-[38rem] rounded-lg hover:translate-y-[-5px]"
+      className="bg-primary p-[4rem] w-[38rem] rounded-lg hover:translate-y-[-5px] xxsm:w-[90%]"
       style={{
         boxShadow: "0 1rem 2.5 #ffc800",
         transition: "all 0.3s ease-in-out",
@@ -51,7 +51,7 @@ function SendToken() {
       <input
         type="text"
         placeholder="Note (optional)"
-        className="w-full p-[1rem] rounded-md my-[1rem] mb-[5rem] bg-primary text-white text-[1.6rem] focus:outline-none focus:border focus:border-[#57a6ff] focus:bg-[#1f2942] outline outline-1"
+        className="w-full p-[1rem] mt-[4rem] rounded-md my-[1rem] mb-[5rem] bg-primary text-white text-[1.6rem] focus:outline-none focus:border focus:border-[#57a6ff] focus:bg-[#1f2942] outline outline-1"
         style={{ transition: "all 0.3s ease-in-out" }}
       ></input>
 

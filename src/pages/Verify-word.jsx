@@ -17,7 +17,7 @@ const VerifyWord = () => {
 
   return (
     <div
-      className="w-full max-w-[40rem] bg-[#2a2a2a] rounded-lg p-[2rem] relative"
+      className="w-full max-w-[40rem] bg-[#2a2a2a] rounded-lg p-[2rem] relative xxsm:w-[90%]"
       style={{ boxShadow: "0rem 1rem 2rem rgba(0, 0, 0, 0.5)" }}
     >
       <BackButton />
@@ -26,7 +26,7 @@ const VerifyWord = () => {
         <StepIndicator activeNumber={2} />
       </div>
 
-      <h2 className="text-white text-[1.4rem] text-center font-medium">
+      <h2 className="text-white text-[1.8rem] text-center font-medium">
         Verify your seed phrase
       </h2>
 
@@ -47,7 +47,7 @@ const VerifyWord = () => {
           className="w-full bg-black text-white rounded-md p-[1rem]"
         ></input>
 
-        <div className="mt-[2rem]">
+        <div className="mt-[4rem]">
           <ButtonNotAllow title={"Next"} allow={buttonAllow} />
         </div>
       </section>

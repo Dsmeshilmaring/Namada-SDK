@@ -42,7 +42,7 @@ const ConnectionAndSync = () => {
         className="w-full p-[.8rem] rounded-md border border-1 border-[#ffc800] mb-[1.5rem] text-[1.4rem] bg-[#333]"
       ></input>
 
-      <div className="flex gap-4 mt-[2rem]">
+      <div className="grid grid-cols-2 gap-4 mt-[2rem] xxsm:flex-col">
         <button
           className="bg-[#ff4d4d] text-white py-[1rem] px-[2rem] rounded-md text-[1.4rem] hover:bg-[#e60000] w-auto flex items-center justify-center"
           style={{ transition: "all 0.3s ease" }}
@@ -58,7 +58,7 @@ const ConnectionAndSync = () => {
         </button>
 
         <button
-          className="bg-[#007bff] text-white py-[1rem] px-[2rem] rounded-md text-[1.4rem] hover:bg-[#0056b3] w-full flex items-center justify-center"
+          className="bg-[#007bff] text-white py-[1rem] px-[2rem] rounded-md text-[1.4rem] hover:bg-[#0056b3] w-full flex items-center justify-center xxsm:col-span-2"
           style={{ transition: "all 0.3s ease" }}
         >
           Turn Shielded Sync

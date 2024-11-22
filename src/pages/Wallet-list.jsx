@@ -17,18 +17,18 @@ const WalletList = () => {
   };
 
   return (
-    <div className="max-w-[40rem]  p-[2rem] bg-primary rounded-lg shadow-custom-shadow relative">
+    <div className="max-w-[40rem]  p-[2rem] bg-primary rounded-lg shadow-custom-shadow relative xxsm:w-[90%]">
+      <div className="flex justify-center my-[2rem]">
+        <StepIndicator activeNumber={5} />
+      </div>
+
       <BackButton link={"/new-page"} />
       <h2 className="text-center font-medium text-[2.4rem] mt-[2rem]">
         Namada Keys Created
       </h2>
-      <p className="text-center text-[#ccc]">
+      <p className="text-center text-[#aaa] mb-[2rem]">
         Here are the accounts generated from your keys
       </p>
-
-      <div className="flex justify-center my-[2rem]">
-        <StepIndicator activeNumber={5} />
-      </div>
 
       <div>
         <div className="relative">

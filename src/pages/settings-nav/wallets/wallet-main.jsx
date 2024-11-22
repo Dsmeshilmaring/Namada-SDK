@@ -36,11 +36,16 @@ function Wallet() {
     }
   };
 
+  // Show Account list handler
+  const showAccountHandler = (value) => {
+    setShowAccountList(value);
+  };
+
   return (
     <>
       {activeLayout === "main" && (
-        <div className="flex flex-col justify-between gap-4 items-center pb-[1.5rem] max-w-[40rem] min-w-[35rem]">
-          <div className="flex items-center justify-center gap-8">
+        <div className="flex flex-col justify-between gap-4 items-center pb-[1.5rem] max-w-[40rem] Xsm:min-w-[35rem] xxsm:w-full">
+          <div className="flex items-center justify-between w-full gap-8 xxsm:gap-2">
             <div
               onMouseEnter={() => setShowAccountList(true)}
               onMouseLeave={() => setShowAccountList(false)}
@@ -49,11 +54,14 @@ function Wallet() {
             >
               {activeAccount.name} <span>▾</span>
               {showAccountList && (
-                <AccountList activeAccount={activeAccountHandler} />
+                <AccountList
+                  showAccountHandler={showAccountHandler}
+                  activeAccount={activeAccountHandler}
+                />
               )}
             </div>
 
-            <p className="text-[1.2rem] bg-[#ffc800] text-black py-[.5rem] px-[1rem] rounded-full">
+            <p className="text-[1.2rem] bg-[#ffc800] text-black py-[.5rem] px-[1rem] rounded-full xxsm:text-[1rem] xxsm:font-semibold">
               SYNCHRONIZED
             </p>
           </div>
@@ -78,6 +86,7 @@ function Wallet() {
             </p>
           </div>
 
+          {/* Button Layout */}
           <div className="grid grid-cols-2 gap-4 w-full">
             <Link
               to={"/setting-nav/wallets/recieve"}

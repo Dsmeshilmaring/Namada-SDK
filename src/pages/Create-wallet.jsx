@@ -55,7 +55,7 @@ const CreateWallet = () => {
           <button className="bg-[#ff9800] text-white w-[4rem] h-[4rem] line-clamp-[3rem] rounded-full cursor-pointer">
             1
           </button>
-          <span className="cursor-pointer mt-[0.5rem] text-[1.2rem]">
+          <span className="cursor-pointer mt-[0.5rem] text-[1.2rem] text-center">
             Create password
           </span>
         </aside>
@@ -64,7 +64,7 @@ const CreateWallet = () => {
           <button className="bg-[#4caf50] text-white w-[4rem] h-[4rem] line-clamp-[3rem] rounded-full cursor-pointer">
             2
           </button>
-          <span className="cursor-pointer mt-[0.5rem] text-[1.2rem]">
+          <span className="cursor-pointer mt-[0.5rem] text-[1.2rem] text-center">
             Secure wallet
           </span>
         </aside>
@@ -73,7 +73,7 @@ const CreateWallet = () => {
           <button className="bg-[#2cb207] text-white w-[4rem] h-[4rem] line-clamp-[3rem] rounded-full cursor-pointer">
             3
           </button>
-          <span className="cursor-pointer mt-[0.5rem] text-[1.2rem]">
+          <span className="cursor-pointer mt-[0.5rem] text-[1.2rem] text-center">
             Confirm phrase
           </span>
         </aside>
