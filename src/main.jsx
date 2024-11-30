@@ -9,8 +9,9 @@ import CreateWallet from "./pages/Create-wallet";
 import NewPage from "./pages/New-Page";
 import VerifyWord from "./pages/Verify-word";
 import WalletList from "./pages/Wallet-list";
-import Dashboard from "./pages/Dashboard";
-import Settings from "./pages/Settings";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Settings from "./pages/dashboard/Settings";
+import HelpAndSupport from "./pages/dashboard/Help-and-support";
 import ImportWalletTold from "./pages/Import-wallet-told";
 import RecieveToken from "./pages/Recieve-token";
 import SendToken from "./pages/Send-token";
@@ -37,6 +38,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/wallet-list" element={<WalletList />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/help-and-support" element={<HelpAndSupport />} />
         <Route path="/import-wallet-told" element={<ImportWalletTold />} />
         <Route path="/recieve-token" element={<RecieveToken />} />
         <Route path="/send-token" element={<SendToken />} />
