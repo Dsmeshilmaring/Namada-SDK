@@ -93,7 +93,10 @@ const transactionType = {
 
 const transaction = transactionList.map((items) => {
   return (
-    <div className="grid grid-cols-[auto,auto,1fr] w-full gap-x-8">
+    <div
+      key={items.name}
+      className="grid grid-cols-[auto,auto,1fr] w-full h-full gap-x-8"
+    >
       <div className="bg-[#FFC800] p-4 rounded-full w-fit h-fit row-span-2">
         {items.type === transactionType.send ? (
           <DownRightIcon />
@@ -129,6 +132,10 @@ const transaction = transactionList.map((items) => {
 });
 
 const Transaction = () => {
-  return <div className="flex flex-col  gap-8 mt-8 mb-8">{transaction}</div>;
+  return (
+    <div className="flex flex-col  gap-8 mt-8 mb-0 h-[42rem] overflow-y-auto">
+      {transaction}
+    </div>
+  );
 };
 export default Transaction;
