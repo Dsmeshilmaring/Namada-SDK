@@ -24,6 +24,7 @@ import Support from "./pages/settings-nav/Support";
 import Privacy from "./pages/settings-nav/Privacy";
 import Receive from "./pages/settings-nav/wallets/Recieve";
 import WalletSendToken from "./pages/settings-nav/wallets/Wallet-send-token";
+import NewSettings from "./pages/dashboard/NewSettings";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -44,6 +45,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/send-token" element={<SendToken />} />
 
         {/* ========== Setting Section ======= */}
+        <Route path="/new-settings" element={<NewSettings />}></Route>
+
         <Route path="/setting-nav">
           <Route
             path="connection-and-sync"
