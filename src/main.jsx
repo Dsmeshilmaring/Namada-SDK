@@ -24,8 +24,8 @@ import Support from "./pages/settings-nav/Support";
 import Privacy from "./pages/settings-nav/Privacy";
 import Receive from "./pages/settings-nav/wallets/Recieve";
 import WalletSendToken from "./pages/settings-nav/wallets/Wallet-send-token";
-import NewWallet from "./pages/dashboard/NewWallet";
-import NewSettings from "./device/mobile-device/mobile-settings/Mobile-settings";
+import MobileWallet from "./device/mobile-device/mobile-wallets/Mobile-wallets";
+import MobileSetting from "./device/mobile-device/mobile-settings/Mobile-settings";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -46,8 +46,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/send-token" element={<SendToken />} />
 
         {/* ========== Setting Section ======= */}
-        <Route path="/new-wallets" element={<NewWallet />}></Route>
-        <Route path="/new-settings" element={<NewSettings />}></Route>
+        <Route path="/new-wallets" element={<MobileWallet />}></Route>
+        <Route path="/mobile-setting" element={<MobileSetting />}></Route>
 
         <Route path="/setting-nav">
           <Route

@@ -1,15 +1,15 @@
 import MobileNav from "./mobile-nav";
-import MenuIcon from "../../assets/icons/menu";
-import NotificationIcon from "../../assets/icons/notification";
+import WalletIcon from "../../assets/icons/wallet";
+import SettingIcon from "../../assets/icons/setting";
 
 const MobileLayout = ({ children }) => {
   return (
     <main className="flex w-full flex-col h-screen bg-[#2A2A2A]">
-      <section className="flex justify-between p-8 px-8">
-        <MenuIcon />
-        <p className="text-[1.8rem]">Settings</p>
-        <NotificationIcon w={24} />
-      </section>
+      <div className="w-full flex justify-between items-center p-8">
+        <WalletIcon w={24} color={"white"} />
+        <h2 className="text-[1.8rem]">Wallet 2</h2>
+        <SettingIcon w={24} color={"white"} />
+      </div>
 
       {children}
 
