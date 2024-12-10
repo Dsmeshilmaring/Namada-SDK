@@ -2,8 +2,12 @@ import HomeIcon from "../../assets/icons/home";
 import WalletIcon from "../../assets/icons/wallet";
 import SettingIcon from "../../assets/icons/setting";
 import TrendingUpIcon from "../../assets/icons/trending-up";
+import { useLocation } from "react-router-dom";
 
 const MobileNav = () => {
+  const location = useLocation();
+  console.log(location.pathname);
+
   return (
     <nav className="flex justify-between items-center w-full mt-auto border-1 px-10 py-3 bg-[#2a2a2a]">
       <ul className="flex flex-col justify-center items-center gap-2">

@@ -1,34 +1,24 @@
-import MobileNav from "../components/layout/mobile-nav";
-import AddressBookIcon from "../assets/icons/address-book";
-import CurrencyIcon from "../assets/icons/currency-change";
-import GlobalIcon from "../assets/icons/global";
-import SyncIcon from "../assets/icons/sync";
-import ToggleIcon from "../assets/icons/toggle";
-import WalletIcon from "../assets/icons/wallet";
-import MenuIcon from "../assets/icons/menu";
-import Notification from "../assets/icons/notification";
-import MoonIcon from "../assets/icons/moon";
-import PlusIcon from "../assets/icons/plus";
-import SecurityShieldIcon from "../assets/icons/security-shield";
-import BackUpIcon from "../assets/icons/back-up";
-import KeyIcon from "../assets/icons/key";
-import LinkThree from "../assets/icons/link-three";
-import SecurityIcon from "../assets/icons/shield";
-import RightAchorIcon from "../assets/icons/right-achor";
-import FaqIcon from "../assets/icons/faq";
-import ConnectIcon from "../assets/icons/contact-support";
-import ReportIcon from "../assets/icons/report-issue";
+import AddressBookIcon from "../../../assets/icons/address-book";
+import CurrencyIcon from "../../../assets/icons/currency-change";
+import GlobalIcon from "../../../assets/icons/global";
+import SyncIcon from "../../../assets/icons/sync";
+import ToggleIcon from "../../../assets/icons/toggle";
+import WalletIcon from "../../../assets/icons/wallet";
+import MoonIcon from "../../../assets/icons/moon";
+import PlusIcon from "../../../assets/icons/plus";
+import SecurityShieldIcon from "../../../assets/icons/security-shield";
+import BackUpIcon from "../../../assets/icons/back-up";
+import KeyIcon from "../../../assets/icons/key";
+import LinkThree from "../../../assets/icons/link-three";
+import SecurityIcon from "../../../assets/icons/shield";
+import RightAchorIcon from "../../../assets/icons/right-achor";
+import MobileLayout from "../../../components/layout/mobile-layout";
+import SupportLayout from "./component/layout/support";
 
 const NewSettings = () => {
   return (
-    <div className="flex w-full flex-col h-fit bg-[#2A2A2A]">
-      <section className="flex justify-between mt-8 px-8">
-        <MenuIcon />
-        <p className="text-[1.8rem]">Settings</p>
-        <Notification w={24} />
-      </section>
-
-      <main className=" w-full mt-10">
+    <MobileLayout>
+      <section className="h-full overflow-y-scroll">
         <div className="flex justify-between gap-8 px-10">
           <div className="flex flex-col items-center bg-[#2E2E2E] rounded-2xl p-8 w-full gap-2">
             <SyncIcon w={24} />
@@ -176,34 +166,8 @@ const NewSettings = () => {
             </div>
           </div>
         </div>
-
-        <div className=" border-b-[0.2rem] border-[#4d4d4d] pb-8">
-          <p className=" mt-8 mx-8 text-[1.8rem] font-medium">Address Book</p>
-
-          <div className="mt-8 mx-8 bg-[#2E2E2E] rounded-2xl">
-            <div className="flex gap-8 items-center pl-8">
-              <FaqIcon w={24} color={"white"} />
-              <p className="border-b-[0.2rem] border-[#4d4d4d] py-8 w-full">
-                FAQ
-              </p>
-            </div>
-
-            <div className="flex gap-8 items-center pl-8">
-              <ConnectIcon w={24} color={"white"} />
-              <p className="border-b-[0.2rem] border-[#4d4d4d] py-8 w-full">
-                Contact Support
-              </p>
-            </div>
-
-            <div className="flex gap-8 items-center pl-8">
-              <ReportIcon w={24} color={"white"} />
-              <p className=" py-8 w-full">Report an Issue</p>
-            </div>
-          </div>
-        </div>
-      </main>
-      <MobileNav />
-    </div>
+      </section>
+    </MobileLayout>
   );
 };
 

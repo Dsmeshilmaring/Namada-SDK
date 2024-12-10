@@ -25,7 +25,7 @@ import Privacy from "./pages/settings-nav/Privacy";
 import Receive from "./pages/settings-nav/wallets/Recieve";
 import WalletSendToken from "./pages/settings-nav/wallets/Wallet-send-token";
 import NewWallet from "./pages/dashboard/NewWallet";
-import NewSettings from "./pages/New-settings";
+import NewSettings from "./device/mobile-device/mobile-settings/Mobile-settings";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
