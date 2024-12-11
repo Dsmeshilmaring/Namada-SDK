@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import CreateNewWallet from "./pages/Create-new-wallet";
 import RestoreWallet from "./pages/Restore-wallet";
+import SettingRoutes from "./routes/WalletRoutes";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CreateWallet from "./pages/Create-wallet";
@@ -45,8 +46,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/recieve-token" element={<RecieveToken />} />
         <Route path="/send-token" element={<SendToken />} />
 
+        <Route path="/mobile-wallets">
+          <Route path="" element={<MobileWallet />}></Route>
+          {SettingRoutes()}
+        </Route>
+
         {/* ========== Setting Section ======= */}
-        <Route path="/new-wallets" element={<MobileWallet />}></Route>
         <Route path="/mobile-setting" element={<MobileSetting />}></Route>
 
         <Route path="/setting-nav">
