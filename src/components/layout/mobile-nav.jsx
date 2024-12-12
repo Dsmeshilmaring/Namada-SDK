@@ -4,12 +4,16 @@ import SettingIcon from "../../assets/icons/setting";
 import TrendingUpIcon from "../../assets/icons/trending-up";
 import SettingActive from "../../assets/icons/setting-active";
 import { useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, act } from "react";
+import WalletActiveIcon from "../../assets/icons/wallet-active";
 
 const MobileNav = () => {
   const [active, setActive] = useState("");
 
   const navList = {
+    home: "/mobile-home",
+    wallet: "/mobile-wallets",
+    market: "/mobile-market",
     setting: "/mobile-setting",
   };
 
@@ -21,15 +25,26 @@ const MobileNav = () => {
   }, [active]);
 
   return (
-    <nav className="flex justify-between items-center w-full mt-auto border-1 px-10 py-3 bg-[#2a2a2a]">
+    <nav className="flex justify-between items-center w-full  mt-auto border-1 px-10 py-3 bg-[#2a2a2a]">
       <ul className="flex flex-col justify-center items-center gap-2">
         <HomeIcon w={20} />
         <p className="text-[1.3rem]">Home</p>
       </ul>
 
       <ul className="flex flex-col justify-center items-center gap-2">
-        <WalletIcon w={20} />
-        <p className="text-[1.3rem]">Wallet</p>
+        {active === navList.wallet ? (
+          <WalletActiveIcon />
+        ) : (
+          <WalletIcon w={20} />
+        )}
+
+        <p
+          className={`${
+            active === navList.wallet ? "text-[#ffc800]" : "text-[#fff]"
+          } text-[1.3rem]`}
+        >
+          Wallet
+        </p>
       </ul>
 
       <ul className="flex flex-col justify-center items-center gap-2">

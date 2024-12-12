@@ -44,12 +44,15 @@ const MobileWallet = () => {
               <p className="text-[1.4rem]">Receive</p>
             </Link>
 
-            <div className="flex flex-col justify-center items-center gap-4">
+            <Link
+              to={"send"}
+              className="flex flex-col justify-center items-center gap-4"
+            >
               <div className="bg-[#FFC800] p-4 rounded-[.8rem]">
                 <SendIcon w={24} />
               </div>
               <p className="text-[1.4rem]">Send</p>
-            </div>
+            </Link>
 
             <div className="flex flex-col justify-center items-center gap-4">
               <div className="bg-[#FFC800] p-4 rounded-[.8rem]">
