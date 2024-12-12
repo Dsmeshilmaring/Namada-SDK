@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MobileLayout from "../../../components/layout/mobile-layout";
 import EyeIcon from "../../../assets/icons/eye";
 import QrIcon from "../../../assets/icons/qr";
@@ -7,8 +8,6 @@ import RightAchorIcon from "../../../assets/icons/right-achor";
 import UpIcon from "../../../assets/icons/up";
 import DownIcon from "../../../assets/icons/down";
 import Transaction from "../../../components/layout/Transaction";
-import WalletIcon from "../../../assets/icons/wallet";
-import SettingIcon from "../../../assets/icons/setting";
 
 const MobileWallet = () => {
   return (
@@ -35,12 +34,15 @@ const MobileWallet = () => {
           </div>
 
           <div className="w-full flex justify-between mt-[3rem]">
-            <div className="flex flex-col justify-center items-center gap-4">
+            <Link
+              to={"receive"}
+              className="flex flex-col justify-center items-center gap-4"
+            >
               <div className="bg-[#FFC800] p-4 rounded-[.8rem]">
                 <QrIcon w={24} />
               </div>
               <p className="text-[1.4rem]">Receive</p>
-            </div>
+            </Link>
 
             <div className="flex flex-col justify-center items-center gap-4">
               <div className="bg-[#FFC800] p-4 rounded-[.8rem]">
