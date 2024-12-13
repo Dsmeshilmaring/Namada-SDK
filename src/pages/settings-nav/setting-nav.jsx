@@ -28,7 +28,7 @@ const SettingNav = () => {
   };
 
   return (
-    <div className="w-[25rem] p-8 flex flex-col gap-[1.2rem] items-start bg-[#1e1e1e] ">
+    <div className="w-[30rem] p-[2.4rem] flex flex-col gap-[1.2rem] items-start bg-[#1e1e1e] ">
       {navList.map((items) => {
         return (
           <button
