@@ -13,8 +13,8 @@ import WalletList from "./pages/Wallet-list";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Settings from "./pages/dashboard/Settings";
 import HelpAndSupport from "./pages/dashboard/Help-and-support";
-import ImportWalletTold from "./pages/Import-wallet-told";
-import RecieveToken from "./pages/Recieve-token";
+import ImportWalletTold from "./pages/Import-wallet-told"; // Remark
+import ReceiveToken from "./pages/Receive-token";
 import SendToken from "./pages/Send-token";
 import ConnectionAndSync from "./pages/settings-nav/Connection-and-sync";
 import SettingMain from "./pages/settings-nav/setting-main";
@@ -23,10 +23,13 @@ import AddressBook from "./pages/settings-nav/Address-book";
 import SecurityAndBackup from "./pages/settings-nav/Security-and-backup";
 import Support from "./pages/settings-nav/Support";
 import Privacy from "./pages/settings-nav/Privacy";
-import Receive from "./pages/settings-nav/wallets/Recieve";
+import Receive from "./pages/settings-nav/wallets/receive";
 import WalletSendToken from "./pages/settings-nav/wallets/Wallet-send-token";
 import MobileWallet from "./device/mobile-device/mobile-wallets/Mobile-wallets";
 import MobileSetting from "./device/mobile-device/mobile-settings/Mobile-settings";
+
+import MobileLayoutLinkTest from "./test/layout/MobileLayoutLinkTest";
+import MobileRoutesTest from "./test/routes/MobileRoutesTest";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -43,8 +46,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/settings" element={<Settings />} />
         <Route path="/help-and-support" element={<HelpAndSupport />} />
         <Route path="/import-wallet-told" element={<ImportWalletTold />} />
-        <Route path="/recieve-token" element={<RecieveToken />} />
+        <Route path="/receive-token" element={<ReceiveToken />} />
         <Route path="/send-token" element={<SendToken />} />
+
+        {/* For testing */}
+        <Route path="/mobile-test">
+          <Route path="" element={<MobileLayoutLinkTest />}></Route>
+          {MobileRoutesTest()}
+        </Route>
 
         <Route path="/mobile-wallets">
           <Route path="" element={<MobileWallet />}></Route>
@@ -76,7 +85,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             />
 
             <Route
-              path="recieve"
+              path="receive"
               element={
                 <SettingMain>
                   <Receive />

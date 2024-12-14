@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import AccountList from "./Account-list";
-import Receive from "./Recieve";
+import Receive from "./Receive";
 import { Link } from "react-router-dom";
 
 function Wallet() {

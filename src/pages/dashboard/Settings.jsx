@@ -56,7 +56,7 @@ const Settings = () => {
             </p>
           </div>
 
-          <section className=" w-full border-1 border-[#555] rounded-md p-3 flex flex-col gap-4 mt-4 overflow-y-auto max-h-[60vh]">
+          <section className=" w-full custom-scrollbar  border-1 border-[#555] rounded-md p-3 flex flex-col gap-4 mt-4 overflow-y-auto max-h-[60vh]">
             <SettingDashboardList
               prop={settingList.wallet}
               EnableButton={EnableButton}
