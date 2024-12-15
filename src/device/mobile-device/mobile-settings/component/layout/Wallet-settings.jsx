@@ -24,7 +24,7 @@ const WalletSettings = () => {
           </div>
 
           <div>
-            <p className="w-full">Address wallet</p>
+            <p className="w-full">Language</p>
             <p className="text-[1.2rem] text-[#bbb]">English</p>
           </div>
         </div>

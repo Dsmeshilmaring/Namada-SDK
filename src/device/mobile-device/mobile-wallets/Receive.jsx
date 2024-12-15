@@ -5,7 +5,7 @@ import CopyIcon from "../../../assets/icons/copy";
 import { Link } from "react-router-dom";
 import UpAnchorIcon from "../../../assets/icons/up-anchor";
 
-const RecieveLayout = () => {
+const Receive = () => {
   const [addressType, setAddressType] = useState("Segwit");
   const [showAddressType, setShowAddressType] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
@@ -132,4 +132,4 @@ const RecieveLayout = () => {
   );
 };
 
-export default RecieveLayout;
+export default Receive;

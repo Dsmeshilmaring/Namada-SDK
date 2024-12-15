@@ -8,10 +8,19 @@ import RightAchorIcon from "../../../assets/icons/right-achor";
 import UpIcon from "../../../assets/icons/up";
 import DownIcon from "../../../assets/icons/down";
 import Transaction from "../../../components/layout/Transaction";
+import ArrowLeftIcon from "../../../assets/icons/arrow-left";
+import BellIcon from "../../../assets/icons/bell";
+import MobileNav from "../../../components/layout/mobile-nav";
 
 const MobileWallet = () => {
   return (
     <MobileLayout>
+      <div className="w-full flex justify-between items-center p-8">
+        <ArrowLeftIcon color={"white"} />
+        <h2 className="text-[1.8rem]">Wallet 2</h2>
+        <BellIcon w={24} color={"white"} />
+      </div>
+
       <div className="bg-[#2A2A2A] w-full flex flex-col justify-between overflow-y-auto">
         <section className="w-full px-[2.4rem] pt-[2.4rem] pb-[0rem] flex items-start flex-col h-fit">
           <div className="w-full flex flex-col justify-center mt-[2.4rem]">
@@ -86,6 +95,8 @@ const MobileWallet = () => {
           </div>
         </section>
       </div>
+
+      <MobileNav />
     </MobileLayout>
   );
 };

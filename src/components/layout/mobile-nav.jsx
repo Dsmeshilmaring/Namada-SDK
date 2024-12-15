@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HomeIcon from "../../assets/icons/home";
 import WalletIcon from "../../assets/icons/wallet";
 import SettingIcon from "../../assets/icons/setting";
@@ -52,7 +53,10 @@ const MobileNav = () => {
         <p className="text-[1.3rem]">Market</p>
       </ul>
 
-      <ul className="flex flex-col justify-center items-center gap-2">
+      <Link
+        to={"/mobile-setting"}
+        className="flex flex-col justify-center items-center gap-2"
+      >
         {active === navList.setting ? (
           <SettingActive />
         ) : (
@@ -66,7 +70,7 @@ const MobileNav = () => {
         >
           Setting
         </p>
-      </ul>
+      </Link>
     </nav>
   );
 };

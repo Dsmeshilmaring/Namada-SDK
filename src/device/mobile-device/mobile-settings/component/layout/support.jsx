@@ -1,5 +1,5 @@
 import FaqIcon from "../../../../../assets/icons/faq";
-import ConnectIcon from "../../../../../assets/icons/contact-support";
+import SupportIcon from "../../../../../assets/icons/support";
 import ReportIcon from "../../../../../assets/icons/report-issue";
 
 const SupportLayout = () => {
@@ -14,7 +14,7 @@ const SupportLayout = () => {
         </div>
 
         <div className="flex gap-8 items-center pl-6">
-          <ConnectIcon w={24} color={"white"} />
+          <SupportIcon w={20} color={"white"} />
           <p className="border-b-[0.2rem] border-[#4d4d4d] py-6 w-full">
             Contact Support
           </p>

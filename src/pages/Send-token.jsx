@@ -10,7 +10,7 @@ function SendToken() {
 
   return (
     <div
-      className="bg-primary p-[4rem] w-[38rem] rounded-lg hover:translate-y-[-5px] xsm:w-[90%] xxsm:h-full xsm:h-fit xxsm:w-full xxsm:p-8"
+      className="bg-primary p-[4rem] w-[38rem] rounded-lg hover:translate-y-[-5px] md:max-w-[40rem] xsm:w-[90%] xxsm:h-full xsm:h-fit xxsm:w-full xxsm:p-8"
       style={{
         boxShadow: "0 1rem 2.5 #ffc800",
         transition: "all 0.3s ease-in-out",
