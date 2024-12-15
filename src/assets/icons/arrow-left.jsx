@@ -1,4 +1,4 @@
-const ArrowLeftIcon = ({ w, color }) => {
+const ArrowLeftIcon = ({ w = 24, color }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

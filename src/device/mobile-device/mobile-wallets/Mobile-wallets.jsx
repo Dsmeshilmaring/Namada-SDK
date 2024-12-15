@@ -16,7 +16,7 @@ const MobileWallet = () => {
   return (
     <MobileLayout>
       <div className="w-full flex justify-between items-center p-8">
-        <ArrowLeftIcon color={"white"} />
+        <ArrowLeftIcon color={"white"} w={24} />
         <h2 className="text-[1.8rem]">Wallet 2</h2>
         <BellIcon w={24} color={"white"} />
       </div>
