@@ -4,6 +4,7 @@ import LinkThree from "../../../../../assets/icons/link-three";
 import SecurityIcon from "../../../../../assets/icons/shield";
 import RightAchorIcon from "../../../../../assets/icons/right-achor";
 import WalletIcon from "../../../../../assets/icons/wallet";
+import SyncIcon from "../../../../../assets/icons/sync";
 
 const OthersLayout = () => {
   return (
@@ -12,7 +13,19 @@ const OthersLayout = () => {
 
       <div className="mt-8 rounded-2xl flex flex-col gap-8">
         <Link
-          to={"/connection-setting"}
+          to={"mobile-connection-and-sync"}
+          className="flex gap-8 items-center px-8"
+        >
+          <div className="p-4 rounded-xl">
+            <SyncIcon w={24} color={"white"} />
+          </div>
+
+          <p className="w-full">Connection and sync</p>
+          <RightAchorIcon w={24} />
+        </Link>
+
+        <Link
+          to={"connection-setting"}
           className="flex gap-8 items-center px-8"
         >
           <div className="p-4 rounded-xl">
@@ -23,7 +36,7 @@ const OthersLayout = () => {
           <RightAchorIcon w={24} />
         </Link>
 
-        <Link to={"/wallets-setting"} className="flex gap-8 items-center px-8">
+        <Link to={"wallets-setting"} className="flex gap-8 items-center px-8">
           <div className="p-4 rounded-xl">
             <WalletIcon w={24} color={"white"} />
           </div>
@@ -32,7 +45,7 @@ const OthersLayout = () => {
           <RightAchorIcon w={24} />
         </Link>
 
-        <Link to={"/security-setting"} className="flex gap-8 items-center px-8">
+        <Link to={"security-setting"} className="flex gap-8 items-center px-8">
           <div className="p-4 rounded-xl">
             <SecurityIcon w={24} color={"white"} />
           </div>

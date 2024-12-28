@@ -18,7 +18,7 @@ const ConnectionAndSync = () => {
     <>
       <section className="p-8 h-full flex flex-col md:w-auto xxsm:w-full">
         <div className="flex justify-between w-full mb-10 md:hidden">
-          <ButtonBack w={24} color={"white"} to={"/mobile-wallets"} />
+          <ButtonBack w={24} color={"white"} to={"/mobile/setting"} />
           <p className="text-[1.8rem]">Connection and Sync</p>
           <b></b>
         </div>

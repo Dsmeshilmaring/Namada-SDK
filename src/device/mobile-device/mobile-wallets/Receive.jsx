@@ -65,10 +65,17 @@ const Receive = () => {
       </Link>
 
       <p className="text-[2.4rem] font-bold mt-8">Receive</p>
+      <p className="text-[1.4rem] text-[#aaa]">
+        Payments can be made by scanning with the Namada App
+      </p>
 
       <div className="border border-[#6b6b6b] mt-8 h-fit rounded-[0.8rem] flex flex-col justify-center items-center p-8 gap-8">
-        <div className="p-4 bg-[#fff] rounded-[1.2rem] mt-8">
-          <img src={addressActive.image} />
+        <div className="p-4 bg-[#fff] rounded-[1.2rem] w-[18rem] h-[18rem] mt-8">
+          <img
+            alt="qr code scanner"
+            className="h-full"
+            src={addressActive.image}
+          />
         </div>
 
         <p className="text-[2.4rem] font-bold">Address Type:</p>
@@ -107,7 +114,7 @@ const Receive = () => {
         </div>
 
         <div className="mt-8 flex w-full justify-center flex-col items-center gap-4">
-          <p ref={addressRef} className="text-[1.2rem] text-[#aaa]">
+          <p ref={addressRef} className="text-[1.3rem] text-[#aaa]">
             {addressActive.code}
           </p>
 

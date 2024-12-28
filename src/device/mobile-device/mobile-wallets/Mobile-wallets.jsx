@@ -9,16 +9,21 @@ import UpIcon from "../../../assets/icons/up";
 import DownIcon from "../../../assets/icons/down";
 import Transaction from "../../../components/layout/Transaction";
 import ArrowLeftIcon from "../../../assets/icons/arrow-left";
-import BellIcon from "../../../assets/icons/bell";
+import ScanIcon from "../../../assets/icons/scan";
 import MobileNav from "../../../components/layout/mobile-nav";
+import DownAchorIcon from "../../../assets/icons/down-achor";
 
 const MobileWallet = () => {
   return (
     <MobileLayout>
-      <div className="w-full flex justify-between items-center p-8">
+      <div className="w-full flex justify-between items-center p-8 py-8">
         <ArrowLeftIcon color={"white"} w={24} />
-        <h2 className="text-[1.8rem]">Wallet 2</h2>
-        <BellIcon w={24} color={"white"} />
+        <aside className="flex gap-4">
+          <h2 className="text-[1.8rem]">Wallet 2</h2>
+          <DownAchorIcon />
+        </aside>
+
+        <ScanIcon w={24} color={"white"} />
       </div>
 
       <div className="bg-[#2A2A2A] w-full flex flex-col justify-between overflow-y-auto">

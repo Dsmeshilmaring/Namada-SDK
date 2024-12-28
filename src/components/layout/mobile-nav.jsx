@@ -13,7 +13,7 @@ const MobileNav = () => {
 
   const navList = {
     home: "/mobile-home",
-    wallet: "/mobile-wallets",
+    wallet: "/mobile/wallet",
     market: "/mobile-market",
     setting: "/mobile-setting",
   };
@@ -22,7 +22,6 @@ const MobileNav = () => {
 
   useEffect(() => {
     setActive(location.pathname);
-    console.log(active);
   }, [active]);
 
   return (
@@ -54,7 +53,7 @@ const MobileNav = () => {
       </ul>
 
       <Link
-        to={"/mobile-setting"}
+        to={"/mobile/setting"}
         className="flex flex-col justify-center items-center gap-2"
       >
         {active === navList.setting ? (

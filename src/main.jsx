@@ -1,7 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  ScrollRestoration,
+} from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import MobileMainRoutes from "./routes/mobile-routes/MobileMainRoutes";
 import ConnectionAndSync from "./pages/settings-nav/Connection-and-sync";
 import SettingMain from "./pages/settings-nav/setting-main";
 import Wallet from "./pages/settings-nav/wallets/wallet-main";
@@ -11,11 +17,9 @@ import Support from "./pages/settings-nav/Support";
 import Privacy from "./pages/settings-nav/Privacy";
 import WalletSendToken from "./pages/settings-nav/wallets/Wallet-send-token";
 import Receive from "./pages/settings-nav/wallets/Receive";
-import MobileSetting from "./device/mobile-device/mobile-settings/Mobile-settings";
 import MobileWallet from "./device/mobile-device/mobile-wallets/Mobile-wallets";
 import MainRoutes from "./routes/MainRoutes";
 import MobileWalletRoutes from "./routes/mobile-routes/WalletRoutes";
-import MobileMainRoutes from "./routes/mobile-routes/MobileMainRoutes";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -26,15 +30,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           {MainRoutes()}
         </Route>
 
-        <Route path="">{MobileMainRoutes()}</Route>
-
         <Route path="/mobile-wallets">
           <Route path="" element={<MobileWallet />}></Route>
           {MobileWalletRoutes()}
         </Route>
 
-        {/* ========== Setting Section ======= */}
-        <Route path="/mobile-setting" element={<MobileSetting />}></Route>
+        {/* ////////////////////// */}
+        {/* ========== Mobile Navigation ======= */}
+        <Route path="/mobile">{MobileMainRoutes()}</Route>
 
         <Route path="/setting-nav">
           <Route
