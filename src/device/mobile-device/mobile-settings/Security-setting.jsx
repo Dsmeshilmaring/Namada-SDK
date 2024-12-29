@@ -12,7 +12,7 @@ const ConnectionSetting = () => {
     <MobileLayout>
       <section className="grid grid-cols-[1fr,10fr,1fr] p-8 px-8">
         <Link to={"/mobile/setting"}>
-          <ArrowLeftIcon color={"white"} />
+          <ArrowLeftIcon color={"currentColor"} />
         </Link>
         <p className="text-[1.8rem] font-bold text-center">Security setting</p>
       </section>

@@ -23,13 +23,13 @@ const AddressBook = () => {
     <MobileLayout>
       <section className="grid grid-cols-[1fr,10fr,1fr] p-8 px-8">
         <Link preventScrollReset to={"/mobile/setting"}>
-          <ArrowLeftIcon color={"white"} w={20} />
+          <ArrowLeftIcon color={"currentColor"} w={20} />
         </Link>
         <p className="text-[1.8rem] font-bold text-center">Address book</p>
       </section>
 
       <section className="flex p-8 flex-col h-screen">
-        <p className="text-[#aaa] text-center">
+        <p className="text-secondary text-center">
           Manage your saved addresses from quick access
         </p>
 
@@ -38,14 +38,14 @@ const AddressBook = () => {
             return (
               <div
                 key={items.name}
-                className="flex justify-between flex-col mt-8 bg-[#1e1e1e] p-8 rounded-xl"
+                className="flex justify-between flex-col mt-8 bg-secondary p-8 rounded-xl"
               >
                 <p>{items.name}</p>
 
                 <div className="flex w-full justify-between">
                   <p className="text-[#aaa]">{items.address}</p>
                   <aside className="flex gap-4">
-                    <EditIcon />
+                    <EditIcon w={24} color={"currentColor"} />
                     <button
                       onClick={() => {
                         navigator.clipboard
@@ -53,10 +53,10 @@ const AddressBook = () => {
                           .then(alert("Copied address"));
                       }}
                     >
-                      <CopyIcon color={"white"} />
+                      <CopyIcon color={"currentColor"} />
                     </button>
 
-                    <DeleteIcon w={24} color={"white"} />
+                    <DeleteIcon w={24} color={"currentColor"} />
                   </aside>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const AddressBook = () => {
         </div>
 
         <button className="mt-auto bg-[#ffc800] p-6 rounded-xl text-[1.8rem] flex justify-center gap-4">
-          <PlusIcon w={24} color={"white"} />
+          <PlusIcon w={24} color={"currentColor"} />
           Add New Address
         </button>
       </section>

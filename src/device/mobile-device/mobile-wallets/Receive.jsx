@@ -59,9 +59,9 @@ const Receive = () => {
   }
 
   return (
-    <section className="bg-[#2A2A2A] h-screen w-full p-8 relative">
-      <Link to={"/mobile-wallets"} className="pb-8 flex justify-between">
-        <LeftIcon color={"#fff"} />
+    <section className="bg-primary h-screen w-full p-8 relative">
+      <Link to={"/mobile/wallet"} className="pb-8 flex justify-between">
+        <LeftIcon color={"currentColor"} />
       </Link>
 
       <p className="text-[2.4rem] font-bold mt-8">Receive</p>
@@ -78,19 +78,23 @@ const Receive = () => {
           />
         </div>
 
-        <p className="text-[2.4rem] font-bold">Address Type:</p>
+        <p className="text-[2rem] font-bold">Address Type:</p>
 
         <div className="w-full relative">
           <button
             onClick={addressTypeHandler}
             className="flex border w-full rounded-[0.8rem] p-4 justify-between"
           >
-            {addressActive.title}{" "}
-            {!showAddressType ? <DownIcon /> : <UpAnchorIcon />}
+            {addressActive.title}
+            {!showAddressType ? (
+              <DownIcon color={"currentColor"} w={24} />
+            ) : (
+              <UpAnchorIcon color={"currentColor"} w={24} />
+            )}
           </button>
 
           {showAddressType ? (
-            <div className="absolute top-20 rounded-[0.8rem] left-1/2 translate-x-[-50%] bg-[#3a3a3a] w-full flex flex-col justify-start items-start">
+            <div className="absolute top-20 rounded-[0.8rem] left-1/2 translate-x-[-50%] bg-[#f0f0f0] dark:bg-[#424242] w-full flex flex-col justify-start items-start">
               {addressList.map((items) => {
                 return (
                   <div className="w-full rounded-[0.8rem]">
@@ -98,8 +102,8 @@ const Receive = () => {
                       onClick={() => addressActiveHandler(items)}
                       className={`${
                         addressActive.title === items.title
-                          ? "bg-[#9b9b9b]"
-                          : "text-[#fff]"
+                          ? "bg-[#d3d3d3] dark:bg-[#555555]"
+                          : "dark:text-primary"
                       } w-full text-start py-4 px-8 rounded-[0.8rem]`}
                     >
                       {items.title}

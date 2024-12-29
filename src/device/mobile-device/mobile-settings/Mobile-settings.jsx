@@ -1,17 +1,20 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useContext, useRef, use } from "react";
 import { Link } from "react-router-dom";
+
 import MobileLayout from "../../../components/layout/mobile-layout";
 import SecurityBackupLayout from "./component/layout/Security-backup";
 import SupportLayout from "../mobile-settings/component/layout/Support";
 import OthersLayout from "./component/layout/Others";
 import WalletSettings from "./component/layout/Wallet-settings";
-import DarkModeLayout from "./component/layout/Dark-mode";
+import DarkModeLayout from "../../../components/layout/Dark-mode";
 import AddressBook from "./component/layout/Address-book";
 import BellIcon from "../../../assets/icons/bell";
 import ArrowLeftIcon from "../../../assets/icons/arrow-left";
+import { ThemeContext } from "../../../contexts/Theme";
 
 const MobileSettings = () => {
   const scrollRef = useRef(null);
+  const context = useContext(ThemeContext);
 
   // Function to save scroll position
   function saveScroll() {
@@ -36,12 +39,12 @@ const MobileSettings = () => {
 
   return (
     <MobileLayout>
-      <section className="flex justify-between p-8 px-8">
+      <section className="flex bg-primary justify-between p-8 px-8">
         <Link to={"/mobile/wallet"}>
-          <ArrowLeftIcon color={"white"} />
+          <ArrowLeftIcon color={"currentColor"} />
         </Link>
-        <p className="text-[1.8rem]">Settings</p>
-        <BellIcon w={24} color={"white"} />
+        <p className="text-[1.8rem] text-primary">Settings</p>
+        <BellIcon w={24} color={"currentColor"} />
       </section>
 
       <section
@@ -50,7 +53,7 @@ const MobileSettings = () => {
         onScroll={saveScroll}
       >
         <DarkModeLayout />
-        <AddressBook saveScroll={saveScroll} />
+        <AddressBook />
         <WalletSettings />
         <SecurityBackupLayout />
         <OthersLayout />

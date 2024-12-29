@@ -13,7 +13,7 @@ const ConnectionSetting = () => {
     <MobileLayout>
       <section className="grid grid-cols-[1fr,10fr,1fr] p-8 px-8">
         <button onClick={() => navigate(-1)}>
-          <ArrowLeftIcon color={"white"} />
+          <ArrowLeftIcon color={"currentColor"} />
         </button>
         <p className="text-[1.8rem] font-bold text-center">
           Connection setting
