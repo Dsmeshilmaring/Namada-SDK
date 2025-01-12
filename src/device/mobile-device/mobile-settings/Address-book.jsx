@@ -13,17 +13,30 @@ const AddressBook = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/api/account.json")
-      .then((res) => res.json())
-      .then((data) => setAccountList(data))
-      .catch((err) => console.log("Something when wrong", err));
+    async function fetchAccount() {
+      try {
+        const response = await fetch("/api/account.json");
+
+        if (!response.ok) {
+          throw new Error("Fetching data failed", response.status);
+        }
+
+        const data = await response.json();
+
+        setAccountList(data);
+      } catch (err) {
+        console.log("There is something went wrong!", err);
+      }
+    }
+
+    fetchAccount();
   }, []);
 
   return (
     <MobileLayout>
       <section className="grid grid-cols-[1fr,10fr,1fr] p-8 px-8">
         <Link preventScrollReset to={"/mobile/setting"}>
-          <ArrowLeftIcon color={"currentColor"} w={20} />
+          <ArrowLeftIcon color={"currentColor"} w={24} />
         </Link>
         <p className="text-[1.8rem] font-bold text-center">Address book</p>
       </section>
