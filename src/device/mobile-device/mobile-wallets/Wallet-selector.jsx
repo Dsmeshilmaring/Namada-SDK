@@ -1,7 +1,12 @@
-import { useState } from "react";
 import MenuDot from "../../../assets/icons/menu-dot";
+import { Link, redirect } from "react-router-dom";
 
-const WalletSelector = ({ clickHander }) => {
+const WalletSelector = ({
+  clickHander,
+  walletList,
+  activeHandler,
+  activeWallet,
+}) => {
   return (
     <>
       <div className="h-screen w-full absolute">
@@ -14,28 +19,36 @@ const WalletSelector = ({ clickHander }) => {
           <div className="w-[6rem] bg-[#ffc800b2] h-[.5rem] rounded-full"></div>
           <p className=" text-[1.8rem] mt-8 font-bold mb-8">Wallets</p>
 
-          <div className="flex w-full flex-col gap-4">
-            <div
-              className={`grid grid-cols-[1fr,1fr,auto] justify-evenly w-full bg-secondary py-4 px-4 rounded-xl border-[.2rem] border-[#b6b6b6]`}
-            >
-              <p className="">Account 1</p>
-              <p className="ml-auto">58.4 NAM</p>
-              <aside className="row-span-2 flex items-center ml-8">
-                <MenuDot w={24} color={"#fff"} />
-              </aside>
-              <p className="text-secondary text-[1.4rem]">0xe0634.....43438</p>
-            </div>
-
-            <div className="grid grid-cols-2 justify-evenly w-full bg-secondary py-4 px-4 rounded-xl">
-              <p className="">Account 1</p>
-              <p className="ml-auto">58.4 NAM</p>
-              <p className="text-secondary text-[1.4rem]">0xe0634.....43438</p>
-            </div>
+          <div className="flex w-full flex-col gap-6">
+            {walletList.map((item) => (
+              <div
+                onClick={() => activeHandler(item)}
+                key={item.name}
+                className={`grid grid-cols-[1fr,1fr,auto] justify-evenly w-full bg-secondary py-4 px-4 rounded-xl ${
+                  activeWallet.name === item.name
+                    ? "border-[.2rem] border-[#b6b6b6]"
+                    : ""
+                }`}
+              >
+                <p className="">{item.name}</p>
+                <p className="ml-auto">{item.balance} NAM</p>
+                <Link
+                  to={"/mobile/setting/address-wallet"}
+                  className="row-span-2 flex items-center ml-8"
+                >
+                  <MenuDot w={24} color={"#fff"} />
+                </Link>
+                <p className="text-secondary text-[1.4rem]">{item.address}</p>
+              </div>
+            ))}
           </div>
 
-          <button className="p-5 font-bold mb-8 bg-[#FFC800] w-full rounded-xl mt-16">
+          <Link
+            to={"/create-new-wallet"}
+            className="p-5 text-center font-bold mb-8 bg-[#FFC800] w-full rounded-xl mt-16"
+          >
             Add Account +
-          </button>
+          </Link>
         </div>
       </div>
     </>

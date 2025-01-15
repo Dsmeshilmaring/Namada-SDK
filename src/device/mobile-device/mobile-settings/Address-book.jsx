@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import fetchData from "../../../utils/fetchData";
 import ArrowLeftIcon from "../../../assets/icons/arrow-left";
 import CopyIcon from "../../../assets/icons/copy";
 import MobileLayout from "../../../components/layout/mobile-layout";
@@ -13,23 +14,9 @@ const AddressBook = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function fetchAccount() {
-      try {
-        const response = await fetch("/api/account.json");
-
-        if (!response.ok) {
-          throw new Error("Fetching data failed", response.status);
-        }
-
-        const data = await response.json();
-
-        setAccountList(data);
-      } catch (err) {
-        console.log("There is something went wrong!", err);
-      }
-    }
-
-    fetchAccount();
+    fetchData("/api/wallets.json", (d) => {
+      setAccountList(d);
+    });
   }, []);
 
   return (

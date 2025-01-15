@@ -1,4 +1,4 @@
-const fetchWallet = async (url) => {
+const fetchData = async (url, cb) => {
   try {
     const res = await fetch(url);
 
@@ -8,10 +8,10 @@ const fetchWallet = async (url) => {
 
     const data = await res.json();
 
-    return data;
+    cb(data);
   } catch (err) {
     return err;
   }
 };
 
-export default fetchWallet;
+export default fetchData;
