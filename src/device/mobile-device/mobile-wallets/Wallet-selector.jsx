@@ -36,7 +36,7 @@ const WalletSelector = ({
                   to={"/mobile/setting/address-wallet"}
                   className="row-span-2 flex items-center ml-8"
                 >
-                  <MenuDot w={24} color={"#fff"} />
+                  <MenuDot w={24} color={"currentColor"} />
                 </Link>
                 <p className="text-secondary text-[1.4rem]">{item.address}</p>
               </div>
