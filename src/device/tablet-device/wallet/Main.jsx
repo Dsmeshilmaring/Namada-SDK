@@ -1,3 +1,4 @@
+import Transaction from "../../../components/layout/Transaction";
 import Header from "../component/header";
 import TabletNav from "../component/nav";
 import EyeIcon from "../../../assets/icons/eye";
@@ -61,7 +62,9 @@ const TabletWallet = () => {
             </li>
           </ul>
 
-          <div></div>
+          <div className="bg-primary p-8 rounded-[2.4rem] mt-8">
+            <Transaction />
+          </div>
         </main>
       </div>
       <footer></footer>
