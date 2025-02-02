@@ -8,12 +8,15 @@ import SendIcon from "../../../assets/icons/send";
 import UpIcon from "../../../assets/icons/up";
 import DownIcon from "../../../assets/icons/down";
 import SwapIcon from "../../../assets/icons/swap";
+import Bitcoin from "../../../assets/icons/Bitcoin";
+import Eth from "../../../assets/icons/Eth";
+import Litecoin from "../../../assets/icons/Litecoin";
 
 const TabletWallet = () => {
   return (
     <>
       <Header />
-      <div className="h-full w-full flex">
+      <div className="h-fit w-full flex">
         <TabletNav />
         <main className="h-full w-full bg-secondary px-10">
           <div className="bg-primary py-22 mt-4 rounded-[1.6rem] flex justify-around items-center p-8 gap-8">
@@ -39,7 +42,7 @@ const TabletWallet = () => {
             <Option w={24} color={"currentColor"} />
           </div>
 
-          <ul className="grid grid-cols-2 gap-x-16 gap-y-8 mt-12">
+          <ul className="grid grid-cols-2 gap-x-16 gap-y-8 mt-10 mb-20">
             <li className="flex gap-8 border p-10 items-center rounded-3xl w-full">
               <QrIcon w={24} color={"currentColor"} />
               <div>Recieve</div>
@@ -64,6 +67,57 @@ const TabletWallet = () => {
 
           <div className="bg-primary p-8 rounded-[2.4rem] mt-8">
             <Transaction />
+          </div>
+
+          <div className="mt-[4.8rem]">
+            <aside className="flex w-full items-center justify-between mt-8">
+              <p>Your Assets</p>
+              <input
+                className="h-16 w-5/12 p-8 rounded-[1.2rem]"
+                placeholder="search tokens"
+              ></input>
+            </aside>
+
+            <ul>
+              <li className="grid grid-cols-[auto,1fr,1fr,1fr] items-center mt-8 bg-primary p-8 rounded-[1.2rem]">
+                <aside className="row-span-2 mr-8">
+                  <Bitcoin w={32} color={"currentColor"} />
+                </aside>
+                <p>Bitcoin</p>
+                <p>$ 42,182.92</p>
+                <p className="ml-auto">15.243 BTC</p>
+
+                <p className="text-secondary">BTC</p>
+                <p className="text-secondary">↑ 1.8 %</p>
+                <p className="text-secondary ml-auto">~ $ 85, 447.872</p>
+              </li>
+
+              <li className="grid grid-cols-[auto,1fr,1fr,1fr] items-center mt-8 bg-primary p-8 rounded-[1.2rem]">
+                <aside className="row-span-2 mr-8">
+                  <Eth w={32} color={"currentColor"} />
+                </aside>
+                <p>Bitcoin</p>
+                <p>$ 42,182.92</p>
+                <p className="ml-auto">15.243 BTC</p>
+
+                <p className="text-secondary">BTC</p>
+                <p className="text-secondary">↑ 1.8 %</p>
+                <p className="text-secondary ml-auto">~ $ 85, 447.872</p>
+              </li>
+
+              <li className="grid grid-cols-[auto,1fr,1fr,1fr] items-center mt-8 bg-primary p-8 rounded-[1.2rem] mb-8">
+                <aside className="row-span-2 mr-8">
+                  <Litecoin w={32} color={"currentColor"} />
+                </aside>
+                <p>Bitcoin</p>
+                <p>$ 42,182.92</p>
+                <p className="ml-auto">15.243 BTC</p>
+
+                <p className="text-secondary">BTC</p>
+                <p className="text-secondary">↑ 1.8 %</p>
+                <p className="text-secondary ml-auto">~ $ 85, 447.872</p>
+              </li>
+            </ul>
           </div>
         </main>
       </div>
