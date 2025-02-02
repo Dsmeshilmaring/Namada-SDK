@@ -9,7 +9,7 @@ import ProfileIcon from "../../../assets/icons/people";
 const TabletNav = () => {
   return (
     <nav className="w-[28rem] h-full bg-primary">
-      <div className="flex gap-4 items-center h-fit py-8 px-8 bg-secondary rounded-r-[1.6rem] w-[95%] mb-20 mt-4 shadow-md">
+      <div className="flex gap-4 items-center h-fit py-8 px-8 bg-secondary rounded-r-[1.6rem] w-[95%] mb-12 mt-4 shadow-md">
         <aside className="bg-yellow rounded-full p-4">
           <ProfileIcon w={42} />
         </aside>
